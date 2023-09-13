@@ -50,6 +50,11 @@ end
  ```
  
  **Installing**
+ - Fork and clone this repo
+  - Run `bundle install`
+  - Run `rails db:{create,migrate,seed}`
+  - Run `rails s` to start the server
+  - Open your browser and navigate to `localhost:3000`
 
 ## API JSON Contract
 
