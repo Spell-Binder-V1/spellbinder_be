@@ -5,4 +5,12 @@ class Api::V0::CollectionsController < ApplicationController
     collections = facade.receive_collections
     render json: CollectionSerializer.new(collections)
   end
+
+  def show
+    collection_id = params[:id]
+
+    facade = CardFacade.new
+    cards = facade.receive_collection_cards(collection_id)
+    render json: CardSerializer.new(cards)
+  end
 end
