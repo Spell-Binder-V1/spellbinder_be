@@ -1,8 +1,8 @@
 class MagicService
 
-  # def self.set_cards(set_code)
-  #   get_url("/v1/cards?set=#{set_code}")
-  # end
+  def self.get_collection_cards(collection_code)
+    get_url("/v1/cards?set=#{collection_code}")
+  end
 
   def self.get_collections
     get_url("/v1/sets")
