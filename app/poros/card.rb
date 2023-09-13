@@ -2,7 +2,7 @@ class Card
   attr_reader :id,
               :multiverseid,
               :name,
-              :set_name
+              :set_name,
               :mana_cost,
               :converted_mana_cost,
               :colors,
