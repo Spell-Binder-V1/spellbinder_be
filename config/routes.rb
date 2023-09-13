@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
-      resources :collections, only: [:index]
+      resources :collections, only: [:index, :show]
     end
   end
 end
