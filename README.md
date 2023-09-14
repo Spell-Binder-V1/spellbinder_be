@@ -62,21 +62,11 @@ end
 ## Routes
 | Action | Route |
 | ----------- | ----------- |
-| get | '/register' |
-| post | '/register' |
-| get | '/login' |
-| post | '/login' |
-| delete | '/logout' |
-| get | '/random_card' 
-| get | '/cards/:id' |
-| get | '/dashboard/decks/:id' |
-| get | '/dashboard/decks' |
-| get | '/dashboard' |
-| get | '/landing_page' |
-| Root | '/' |
-| get | '/search' |
-| get | '/collections' |
-| get | '/collections/:id' |
+| get | '/api/v0/collections' |
+| get | '/api/v0/collections/:id' |
+| get | '/api/v0/cards/random' |
+| get | '/api/v0/cards/:id' |
+
 
 # Test Suite
  - run `bundle exec rspec` to run the test suite
