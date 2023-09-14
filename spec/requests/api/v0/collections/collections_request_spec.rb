@@ -89,7 +89,7 @@ RSpec.describe "CollectionsController" do
       expect(response.status).to eq(200)
     end
 
-    xit "return sad path for a collection of cards" do
+    it "return sad path for a collection of cards" do
       collection_invalid_id = "invalid_id"
       get "/api/v0/collections/#{collection_invalid_id}"
 
