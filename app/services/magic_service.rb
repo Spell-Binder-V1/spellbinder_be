@@ -1,5 +1,9 @@
 class MagicService
 
+  def self.get_card_show(card_id)
+    get_url("/v1/cards/#{card_id}")
+  end
+
   def self.get_show_card(card_id)
     get_url("/v1/cards/#{card_id}")
   end

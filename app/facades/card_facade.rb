@@ -13,4 +13,14 @@ class CardFacade
     card_data = show_card[:card]
     Card.new(card_data, 1)
   end
+
+  def receive_card_show(card_id)
+    show_card = MagicService.get_card_show(card_id)
+    if show_card.has_key?(:error)
+        Error.new(show_card)
+    else
+      card_data = show_card[:card]
+      Card.new(card_data, 1)
+    end
+  end
 end
