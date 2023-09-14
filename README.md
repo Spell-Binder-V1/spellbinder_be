@@ -57,48 +57,178 @@ end
   - Open your browser and navigate to `localhost:3000`
 
 ## API JSON Contract
-**Description of API endpoints for front end application**
+*Description of API endpoints for front end application*
 
-## Collections
-Description of Collections endpoints
+<u> Collections </u>
+- Description of Collections endpoints
 
-**GET /api/v0/collections**
+> `GET /api/v0/collections`
 
 *Success Response (200 OK):*
 
 - Status: 200 OK
 - Description: Successful response with a Collections list.
-- Data Format: An array of hashes.
+- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+```ruby
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "collection",
+            "attributes": {
+                "code": "10E",
+                "name": "Tenth Edition",
+                "type": "core",
+                "release_date": "2007-07-13",
+                "block": "Core Set"
+            }
+        },
+        {
+            "id": "2",
+            "type": "collection",
+            "attributes": {
+                "code": "2ED",
+                "name": "Unlimited Edition",
+                "type": "core",
+                "release_date": "1993-12-01",
+                "block": "Core Set"
+            }
+        },
+        {
+            "id": "3",
+            "type": "collection",
+            "attributes": {
+                "code": "2X2",
+                "name": "Double Masters 2022",
+                "type": "masters",
+                "release_date": "2022-07-08",
+                "block": null
+            }
+        },
+        {
+          ....................................
+        }
+```
 
-**GET /api/v0/collections/:id**
+> `GET /api/v0/collections/:id`
 
 *Success Response (200 OK):*
 
 - Status: 200 OK
 - Description: Successful response with list of the Collections cards.
 - Data Format: An array of hashes.
+---
+<u> Random </u> 
+- Description of Random endpoints
 
-## Random 
-**GET /api/v0/random**
+> `GET /api/v0/random`
 
 *Success Response (200 OK):*
 
 - Status: 200 OK
 - Description: Successful response with a random card.
-- Data Format: An array of hashes.
+- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+```ruby
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "card",
+            "attributes": {
+                "id": 1,
+                "multiverseid": "479367",
+                "name": "Pack Rat",
+                "mana_cost": "{1}{B}",
+                "converted_mana_cost": 2.0,
+                "colors": [
+                    "B"
+                ],
+                "color_identity": [
+                    "B"
+                ],
+                "type": "Creature — Rat",
+                "types": [
+                    "Creature"
+                ],
+                "subtypes": [
+                    "Rat"
+                ],
+                "rarity": "Rare",
+                "set": "SLD",
+                "text": "Pack Rat's power and toughness are each equal to the number of Rats you control.\n{2}{B}, Discard a card: Create a token that's a copy of Pack Rat.",
+                "artist": "Fiona Hsieh",
+                "number": "35",
+                "power": "*",
+                "toughness": "*",
+                "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=479367&type=card",
+                "rulings": [
+                    {
+                        "date": "2012-10-01",
+                        "text": "Pack Rat’s first ability counts any creature you control with the creature type Rat, not just Pack Rats."
+                    },
+                    {
+                        "date": "2012-10-01",
+                        "text": "The token will copy Pack Rat’s two abilities. Its power and toughness will be equal to the number of Rats you control (not the number of Rats you controlled when the token entered the battlefield). It will also be able to create copies of itself."
+                    },
+                    {
+                        "date": "2012-10-01",
+                        "text": "The token won’t copy counters on Pack Rat, nor will it copy other effects that have changed Pack Rat’s power, toughness, types, color, or so on. Normally, this means the token will simply be a Pack Rat. But if any copy effects have affected that Pack Rat, they’re taken into account."
+                    },
+                    {
+                        "date": "2012-10-01",
+                        "text": "If Pack Rat leaves the battlefield before its activated ability resolves, the token will still enter the battlefield as a copy of Pack Rat, using Pack Rat’s copiable values from when it was last on the battlefield."
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+---
+<u> Cards </u>
+- Description of Card endpoints
 
-
-## Cards
-**GET /api/v0/cards/:id**
+> `GET /api/v0/cards/:id`
 
 *Success Response (200 OK):*
 
 - Status: 200 OK
 - Description: Successful response with a single card and it attributes.
-- Data Format: An array of hashes.
+- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+```ruby
+{
+    "data": {
+        "id": "1",
+        "type": "card",
+        "attributes": {
+            "id": 1,
+            "multiverseid": "600",
+            "name": "Black Lotus",
+            "mana_cost": "{0}",
+            "converted_mana_cost": 0.0,
+            "colors": null,
+            "color_identity": null,
+            "type": "Artifact",
+            "types": [
+                "Artifact"
+            ],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+    }
+}
+```
 
 
-## Routes
+# Routes
 | Action | Route |
 | ----------- | ----------- |
 | get | '/api/v0/collections' |
