@@ -6,9 +6,9 @@ RSpec.describe "Cards Controller" do
       get "/api/v0/cards/random"
       expect(response).to be_successful
       random_card_data = JSON.parse(response.body)
-      
+
       card_data = random_card_data["data"][0]
-    
+
       expect(card_data).to have_key("id")
       expect(card_data["id"]).to be_a(String)
       expect(card_data).to have_key("type")
@@ -60,15 +60,18 @@ RSpec.describe "Cards Controller" do
       expect(response.status).to eq(200)
     end
   end
+
   describe "card show" do
     it "returns happy path for a specific card" do
       card_id = 600
       get "/api/v0/cards/#{card_id}"
+
       expect(response).to be_successful
+
       random_card_data = JSON.parse(response.body)
-      # require 'pry'; binding.pry
+
       card_data = random_card_data["data"]
-    
+
       expect(card_data).to have_key("id")
       expect(card_data["id"]).to be_a(String)
       expect(card_data).to have_key("type")
@@ -118,6 +121,16 @@ RSpec.describe "Cards Controller" do
       expect(attributes["rulings"]).to be_an(Array).or be(nil)
 
       expect(response.status).to eq(200)
+    end
+
+    it "return sad path for a cards show" do
+      card_invalid_id = "invalid_id"
+      get "/api/v0/cards/#{card_invalid_id}"
+
+      expect(response).to have_http_status(:not_found)
+      expect(response.status).to eq(404)
+      error_response = JSON.parse(response.body, symbolize_names: true)
+      expect(error_response).to have_key(:errors)
     end
   end
 end
