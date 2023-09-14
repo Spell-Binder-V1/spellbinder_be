@@ -1,9 +1,8 @@
 class MagicService
 
-  # def self.get_show_card(card_id)
-  #   get_url("/v1/cards/#{card_id}")
-  #   # response(data)
-  # end
+  def self.get_show_card(card_id)
+    get_url("/v1/cards/#{card_id}")
+  end
 
   # def self.response(data)
   #   data.first[0].map do |card_data|
@@ -33,8 +32,6 @@ class MagicService
   #     }
   #   end
   # end
-
-
 
   def self.get_random_card
     get_url("/v1/cards?random=true&pageSize=1")

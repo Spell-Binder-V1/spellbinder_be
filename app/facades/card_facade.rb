@@ -8,11 +8,9 @@ class CardFacade
     end
   end
 
-  # def receive_show_card(card_id)
-  #   show_card = MagicService.get_show_card(card_id)
-  #   card_data = show_card[:card].have_key.values
-  #   card_data.map.with_index(1) do |collection, i|
-  #     Card.new(collection, i)
-  #   end
-  # end
+  def receive_show_card(card_id)
+    show_card = MagicService.get_show_card(card_id)
+    card_data = show_card[:card]
+    Card.new(card_data, 1)
+  end
 end
