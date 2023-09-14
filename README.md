@@ -57,8 +57,9 @@ end
   - Open your browser and navigate to `localhost:3000`
 
 ## API JSON Contract
+**Description of API endpoints for front end application**
 
-## Endpoints
+## Routes
 | Action | Route |
 | ----------- | ----------- |
 | get | '/register' |
@@ -87,7 +88,14 @@ end
 ## Reflection
 
 ## Postman
+**Postman happy request to Heroku**
 
+**Postman Happy Response**
+**screenshot of postman happyresponse**
+
+**Postman sad request to Heroku**
+
+**Postman Sad Response**
 # Developed With
 ---
 
