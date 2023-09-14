@@ -68,7 +68,8 @@ end
 
 - Status: 200 OK
 - Description: Successful response with a Collections list.
-- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+- Data Format: An array of collection objects, each containing "id", "type", and "attributes".
+<!-- - Location:  -->
 ```ruby
 {
     "data": [
@@ -116,7 +117,77 @@ end
 
 - Status: 200 OK
 - Description: Successful response with list of the Collections cards.
-- Data Format: An array of hashes.
+- Data Format: A hash of card objects, each containing "id", "type", and "attributes".
+<!-- - Location:  -->
+```ruby
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "card",
+            "attributes": {
+                "id": 1,
+                "multiverseid": "968",
+                "name": "Abu Ja'far",
+                "mana_cost": "{W}",
+                "converted_mana_cost": 1.0,
+                "colors": [
+                    "W"
+                ],
+                "color_identity": [
+                    "W"
+                ],
+                "type": "Creature — Human",
+                "types": [
+                    "Creature"
+                ],
+                "subtypes": [
+                    "Human"
+                ],
+                "rarity": "Uncommon",
+                "set": "ARN",
+                "text": "When Abu Ja'far dies, destroy all creatures blocking or blocked by it. They can't be regenerated.",
+                "artist": "Ken Meyer, Jr.",
+                "number": "1",
+                "power": "0",
+                "toughness": "1",
+                "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=968&type=card",
+                "rulings": null
+            }
+        },
+        {
+            "id": "2",
+            "type": "card",
+            "attributes": {
+                "id": 2,
+                "multiverseid": "969",
+                "name": "Army of Allah",
+                "mana_cost": "{1}{W}{W}",
+                "converted_mana_cost": 3.0,
+                "colors": [
+                    "W"
+                ],
+                "color_identity": [
+                    "W"
+                ],
+                "type": "Instant",
+                "types": [
+                    "Instant"
+                ],
+                "subtypes": null,
+                "rarity": "Common",
+                "set": "ARN",
+                "text": "Attacking creatures get +2/+0 until end of turn.",
+                "artist": "Brian Snõddy",
+                "number": "2",
+                "power": null,
+                "toughness": null,
+                "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=969&type=card",
+                "rulings": null
+            }
+        },
+        ...................
+```
 ---
 <u> Random </u> 
 - Description of Random endpoints
@@ -127,7 +198,8 @@ end
 
 - Status: 200 OK
 - Description: Successful response with a random card.
-- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+- Data Format: An array of a single card object, containing "id", "type", and "attributes".
+<!-- - Location: -->
 ```ruby
 {
     "data": [
@@ -194,7 +266,8 @@ end
 
 - Status: 200 OK
 - Description: Successful response with a single card and it attributes.
-- Data Format: An array of event objects, each containing "id", "type", and "attributes".
+- Data Format: A hash of card objects, each containing "id", "type", and "attributes".
+<!-- - Location:  -->
 ```ruby
 {
     "data": {
