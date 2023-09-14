@@ -59,6 +59,45 @@ end
 ## API JSON Contract
 **Description of API endpoints for front end application**
 
+## Collections
+Description of Collections endpoints
+
+**GET /api/v0/collections**
+
+*Success Response (200 OK):*
+
+- Status: 200 OK
+- Description: Successful response with a Collections list.
+- Data Format: An array of hashes.
+
+**GET /api/v0/collections/:id**
+
+*Success Response (200 OK):*
+
+- Status: 200 OK
+- Description: Successful response with list of the Collections cards.
+- Data Format: An array of hashes.
+
+## Random 
+**GET /api/v0/random**
+
+*Success Response (200 OK):*
+
+- Status: 200 OK
+- Description: Successful response with a random card.
+- Data Format: An array of hashes.
+
+
+## Cards
+**GET /api/v0/cards/:id**
+
+*Success Response (200 OK):*
+
+- Status: 200 OK
+- Description: Successful response with a single card and it attributes.
+- Data Format: An array of hashes.
+
+
 ## Routes
 | Action | Route |
 | ----------- | ----------- |
@@ -81,11 +120,13 @@ end
 **Postman happy request to Heroku**
 
 **Postman Happy Response**
-**screenshot of postman happyresponse**
+<!-- **screenshot of postman happy-response** -->
 
 **Postman sad request to Heroku**
 
 **Postman Sad Response**
+<!-- **screenshot of postman sad-response** -->
+
 # Developed With
 ---
 
