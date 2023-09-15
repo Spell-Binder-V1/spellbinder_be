@@ -37,6 +37,10 @@ class MagicService
   #   end
   # end
 
+  def self.get_card_search(card_name)
+    get_url("/v1/cards?name=#{card_name}")
+  end
+
   def self.get_random_card
     get_url("/v1/cards?random=true&pageSize=1")
   end
