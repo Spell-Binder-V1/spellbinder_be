@@ -7,7 +7,7 @@ RSpec.describe "Cards Controller" do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      get "/api/v0/cards/search", headers: headers, params: card_search_params
+      get "/api/v0/search", headers: headers, params: card_search_params
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -20,7 +20,7 @@ RSpec.describe "Cards Controller" do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      get "/api/v0/cards/search", headers: headers, params: card_search_params
+      get "/api/v0/search", headers: headers, params: card_search_params
 
       expect(response).to have_http_status(:success)
       expect(response.status).to eq(200)
@@ -31,7 +31,7 @@ RSpec.describe "Cards Controller" do
 
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      get "/api/v0/cards/search", headers: headers, params: card_search_params
+      get "/api/v0/search", headers: headers, params: card_search_params
       
       error = JSON.parse(response.body)
       expect(response).to have_http_status(:not_found)

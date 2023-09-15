@@ -4,39 +4,6 @@ class MagicService
     get_url("/v1/cards/#{card_id}")
   end
 
-  def self.get_show_card(card_id)
-    get_url("/v1/cards/#{card_id}")
-  end
-
-  # def self.response(data)
-  #   data.first[0].map do |card_data|
-  #     require 'pry'; binding.pry
-  #     {
-  #       "card": [{
-  #         name: card_data[:name],
-  #         "set_name" => card_data[:setName],
-  #         "multiverseid" => card_data[:multiverseid],
-  #         "mana_cost" => card_data[:manaCost],
-  #         "converted_mana_cost" => card_data[:cmc],
-  #         "colors" => card_data[:colors],
-  #         "color_identity" => card_data[:colorIdentity],
-  #         "type" => card_data[:type],
-  #         "types" => card_data[:types],
-  #         "subtypes" => card_data[:subtypes],
-  #         "rarity" => card_data[:rarity],
-  #         "set" => card_data[:set],
-  #         "text" => card_data[:text],
-  #         "artist" => card_data[:artist],
-  #         "number" => card_data[:number],
-  #         "power" => card_data[:power],
-  #         "toughness" => card_data[:toughness],
-  #         "image_url" => card_data[:imageUrl],
-  #         "rulings" => card_data[:rulings]
-  #       }]
-  #     }
-  #   end
-  # end
-
   def self.get_card_search(card_name)
     get_url("/v1/cards?name=#{card_name}")
   end
