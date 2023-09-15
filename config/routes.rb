@@ -6,10 +6,8 @@ Rails.application.routes.draw do
         collection do
           get "random"
         end
-        collection do
-          get "search"
-        end
       end
+      get 'search', to: 'search#search'
     end
   end
 end
