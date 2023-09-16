@@ -10,42 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_15_221353) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_16_234415) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "cards", force: :cascade do |t|
-    t.string "name"
-    t.string "set_name"
-    t.string "multiverseid"
-    t.string "mana_cost"
-    t.float "converted_mana_cost"
-    t.text "colors", default: [], null: false, array: true
-    t.text "color_identity", default: [], null: false, array: true
-    t.string "type"
-    t.text "types", default: [], null: false, array: true
-    t.text "subtypes", default: [], null: false, array: true
-    t.string "rarity"
-    t.string "text"
-    t.string "set"
-    t.string "artist"
-    t.string "number"
-    t.string "power"
-    t.string "toughness"
-    t.string "image_url"
-    t.text "rulings", default: [], null: false, array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "deck_cards", force: :cascade do |t|
-    t.bigint "deck_id", null: false
-    t.bigint "card_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["card_id"], name: "index_deck_cards_on_card_id"
-    t.index ["deck_id"], name: "index_deck_cards_on_deck_id"
-  end
 
   create_table "decks", force: :cascade do |t|
     t.string "name"
@@ -62,6 +29,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_15_221353) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "deck_cards", "cards"
-  add_foreign_key "deck_cards", "decks"
 end
