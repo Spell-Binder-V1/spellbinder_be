@@ -1,5 +1,5 @@
 class Collection
-  attr_reader :code, :name, :type, :release_date, :block, :id
+  attr_reader :code, :name, :type, :release_date, :block, :id, :cards
 
   def initialize(attributes, id)
     @id = id
@@ -8,5 +8,6 @@ class Collection
     @type = attributes[:type]
     @release_date = attributes[:releaseDate]
     @block = attributes[:block]
+    @cards = []
   end
 end
