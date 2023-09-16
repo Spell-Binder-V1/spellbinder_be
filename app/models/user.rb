@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   has_many :decks
-  has_secure_password
 
-  validates :username, presence: true
+  validates :username, uniqueness: true, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password_digest, presence: true
+  validates_presence_of :password_digest, require: true
+  # validates_presence_of :password_confirmation, require: true
+  has_secure_password
 end
