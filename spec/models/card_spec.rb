@@ -10,7 +10,7 @@ RSpec.describe Card, type: :model do
     it {should validate_presence_of(:multiverseid) }
     it { should validate_presence_of(:mana_cost) }
     it {should validate_presence_of(:converted_mana_cost) }
-    # it {should validate_presence_of(:type) }
+    it {should validate_presence_of(:type) }
     it {should validate_presence_of(:rarity) }
     it {should validate_presence_of(:set) }
     it {should validate_presence_of(:text) }
@@ -113,6 +113,16 @@ RSpec.describe Card, type: :model do
         card.send(:rulings_is_an_array)
         expect(card.rulings).to eq(["yellow", "green"])
       end
+    end
+  end
+
+  context "with test" do
+    it "tests" do
+      @c1 = Card.create!(name: "a", colors: ["red", "green", "blue"], color_identity: ["green"], types: ["creature"],
+                      subtypes: ["creature"], rulings: ["c"], type: "creature",
+                      set_name: "k", multiverseid: "d", mana_cost: "blue",
+                      converted_mana_cost: 4.0, rarity: "legendary", text: "mtg", set: "mtg",
+                      artist: "B. Ross", number: "3", power: "10", toughness: "10", image_url: "http://")
     end
   end
 end

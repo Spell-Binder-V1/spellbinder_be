@@ -12,7 +12,7 @@ class Card < ApplicationRecord
   validates :multiverseid, presence: true
   validates :mana_cost, presence: true
   validates :converted_mana_cost, presence: true
-  # validates :type, presence: true
+  validates :type, presence: true
   validates :rarity, presence: true
   validates :set, presence: true
   validates :text, presence: true
@@ -21,6 +21,7 @@ class Card < ApplicationRecord
   validates :power, presence: true
   validates :toughness, presence: true
   validates :image_url, presence: true
+  self.inheritance_column = nil
   
   def colors_is_an_array
     colors.is_a?(Array)
