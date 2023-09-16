@@ -23,7 +23,7 @@ RSpec.describe "Collections Facade" do
       collection_cards = collection_facade.receive_collection_cards(collection_id)
 
       collection_cards.each do |card|
-        expect(card).to be_a(Card)
+        expect(card).to be_a(CardPoro)
       end
 
       test_card = collection_cards.first
