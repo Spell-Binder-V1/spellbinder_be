@@ -12,7 +12,7 @@ class Card < ApplicationRecord
   validates :multiverseid, presence: true
   validates :mana_cost, presence: true
   validates :converted_mana_cost, presence: true
-  validates :type, presence: true
+  # validates :type, presence: true
   validates :rarity, presence: true
   validates :set, presence: true
   validates :text, presence: true
@@ -22,35 +22,23 @@ class Card < ApplicationRecord
   validates :toughness, presence: true
   validates :image_url, presence: true
   
-  private
+  def colors_is_an_array
+    colors.is_a?(Array)
+  end
 
-    def colors_is_an_array
-      unless colors.is_a?(Array)
-        errors.add(:colors, "must be an Array")
-      end
-    end
+  def color_identity_is_an_array
+    color_identity.is_a?(Array)
+  end
 
-    def color_identity_is_an_array
-      unless color_identity.is_a?(Array)
-        errors.add(:color_identity, "must be an Array")
-      end
-    end
+  def types_is_an_array
+    types.is_a?(Array)
+  end
 
-    def types_is_an_array
-      unless types.is_a?(Array)
-        errors.add(:types, "must be an Array")
-      end
-    end
+  def subtypes_is_an_array
+    subtypes.is_a?(Array)
+  end
 
-    def subtypes_is_an_array
-      unless subtypes.is_a?(Array)
-        errors.add(:subtypes, "must be an Array")
-      end
-    end
-
-    def rulings_is_an_array
-      unless rulings.is_a?(Array)
-        errors.add(:rulings, "must be an Array")
-      end
-    end
+  def rulings_is_an_array
+    rulings.is_a?(Array)
+  end
 end

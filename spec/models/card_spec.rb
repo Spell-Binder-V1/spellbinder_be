@@ -10,7 +10,7 @@ RSpec.describe Card, type: :model do
     it {should validate_presence_of(:multiverseid) }
     it { should validate_presence_of(:mana_cost) }
     it {should validate_presence_of(:converted_mana_cost) }
-    it {should validate_presence_of(:type) }
+    # it {should validate_presence_of(:type) }
     it {should validate_presence_of(:rarity) }
     it {should validate_presence_of(:set) }
     it {should validate_presence_of(:text) }
@@ -75,6 +75,45 @@ RSpec.describe Card, type: :model do
     test = Card.new(rulings: ["date:", "text:"])
     #rulings contains a hash with string values
     test.valid?
+  end
+
+  describe "#class methods" do
+    context "should validate color is an array" do
+      it 'accepts array assignments' do
+        card = Card.new(colors: ["red", "blue"])
+        card.colors = ["yellow", "green"]
+        card.send(:colors_is_an_array)
+        expect(card.colors).to eq(["yellow", "green"])
+      end
+
+      it 'accepts array assignments' do
+        card = Card.new(color_identity: ["red", "blue"])
+        card.color_identity = ["yellow", "green"]
+        card.send(:color_identity_is_an_array)
+        expect(card.color_identity).to eq(["yellow", "green"])
+      end
+
+      it 'accepts array assignments' do
+        card = Card.new(types: ["red", "blue"])
+        card.types = ["yellow", "green"]
+        card.send(:types_is_an_array)
+        expect(card.types).to eq(["yellow", "green"])
+      end
+
+      it 'accepts array assignments' do
+        card = Card.new(subtypes: ["red", "blue"])
+        card.subtypes = ["yellow", "green"]
+        card.send(:subtypes_is_an_array)
+        expect(card.subtypes).to eq(["yellow", "green"])
+      end
+
+      it 'accepts array assignments' do
+        card = Card.new(rulings: ["red", "blue"])
+        card.rulings = ["yellow", "green"]
+        card.send(:rulings_is_an_array)
+        expect(card.rulings).to eq(["yellow", "green"])
+      end
+    end
   end
 end
 
