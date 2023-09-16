@@ -25,11 +25,15 @@ class CardFacade
   end
 
   def receive_card_search(card_name)
+    # require 'pry'; binding.pry
     search_card = MagicService.get_card_search(card_name)
     return unless search_card.values != []
       card_data = search_card[:cards]
-      card_data.map.with_index(1) do |collection, i|
-        Card.new(collection, i)
+      # card_data.map.with_index(1) do |collection, i|
+      #   Card.new(collection, i)
+      # end
+      card_data.map do |collection|
+        Card.new(collection)
       end
   end
 end
