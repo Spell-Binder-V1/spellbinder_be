@@ -11,7 +11,7 @@ class CollectionFacade
     card_data = collections[:cards]
 
     card_data.map.with_index(1) do |collection, i|
-      Card.new(collection, i)
+      CardPoro.new(collection, i)
     end
   end
 
