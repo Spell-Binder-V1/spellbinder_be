@@ -6,15 +6,15 @@ RSpec.describe "CollectionsController" do
       get "/api/v0/collections"
       expect(response).to be_successful
       collections_data = JSON.parse(response.body)
-      
+
       expect(collections_data).to have_key("data")
-      
+
       collections = collections_data["data"]
       collections.each do |collection|
-        
+
         attributes = collection["attributes"]
         expect(attributes).to have_key("code")
-    
+
         expect(attributes["code"]).to be_a(String)
         expect(attributes).to have_key("name")
         expect(attributes["name"]).to be_a(String)
@@ -36,8 +36,8 @@ RSpec.describe "CollectionsController" do
       expect(response).to be_successful
 
       collection_raw_data = JSON.parse(response.body)
-      collection_data = collection_raw_data["data"][0]
-    
+      collection_data = collection_raw_data["data"]
+
       expect(collection_data).to have_key("id")
       expect(collection_data["id"]).to be_a(String)
       expect(collection_data).to have_key("type")
@@ -45,8 +45,7 @@ RSpec.describe "CollectionsController" do
       expect(collection_data).to have_key("attributes")
       expect(collection_data["attributes"]).to be_a(Hash)
 
-      attributes = collection_data["attributes"]
-
+      attributes = collection_data["attributes"]["cards"].first
       expect(attributes).to have_key("id")
       expect(attributes["id"]).to be_a(Integer)
       expect(attributes).to have_key("multiverseid")
