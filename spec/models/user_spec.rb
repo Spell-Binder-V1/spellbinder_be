@@ -9,6 +9,8 @@ RSpec.describe User, type: :model do
     should validate_uniqueness_of(:username)
     should validate_presence_of(:email)
     should validate_uniqueness_of(:email)
-    should validate_presence_of(:password)
+    # should validate_presence_of(:password)
+    it { should validate_presence_of(:password) }
+    it { should have_secure_password }
   end
 end

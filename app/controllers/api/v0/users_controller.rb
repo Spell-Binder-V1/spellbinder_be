@@ -1,15 +1,18 @@
-class UsersController < ApplicationController
-  # // def new 
-  #  //  @user = User.new
-  #//  end
+class Api::V0::UsersController < ApplicationController
+  def new 
+    @user = User.new
+  end
 
-  # // def create
+    def create
+      require 'pry'; binding.pry
     # ?  user = user_params
     #  ? user[:username] = user[:username].downcase
     #  ? new_user = User.create(user)
-  #  // new_user = User.create(user_params)
+      # new_user = User.create!(user_params)
+      user = User.create!(user_params)
+
   #   # TODO possible render json success message?
-  # /// end
+    end
 
   #  ? def login_form
   #  ? end
@@ -23,9 +26,9 @@ class UsersController < ApplicationController
   #     # TODO error messgage
   # // end
 
-  # private
+  private
 
-  # // def user_params
-  #  //  params.require(:user).permit(:username, :password, :email)
-  # // end
+  def user_params
+    params.require(:user).permit(:username, :password, :email)
+  end
 end
