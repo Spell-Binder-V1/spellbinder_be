@@ -9,7 +9,6 @@ class Api::V0::CardsController < ApplicationController
     card_id = params[:id]
     facade = CardFacade.new
     card = facade.receive_card_show(card_id)
-    # require 'pry'; binding.pry
     if card.is_a?(Error)
       render json: ErrorSerializer.serialize(card), status: :not_found
     else

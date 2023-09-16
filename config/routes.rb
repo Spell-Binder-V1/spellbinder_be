@@ -7,6 +7,7 @@ Rails.application.routes.draw do
           get "random"
         end
       end
+      get 'search', to: 'search#search'
     end
   end
 end
