@@ -196,7 +196,7 @@ end
 <u> Random </u> 
 - Description of Random endpoints
 
-> `GET /api/v0/random`
+> `GET /api/v0/cards/random`
 
 *Success Response (200 OK):*
 
@@ -304,14 +304,317 @@ end
 }
 ```
 
+<u> Register New</u>
+
+> `GET /api/v0/register`
+
+Client will see a form with the following attributes:
+
+{
+    "data": {
+      "id": "1",
+      "type": "user",
+      "attributes": {
+        "user_name": "turing_test"
+        "email": "turing_test@turing.edu"
+        "password_digest": "password"
+      }
+    }
+}
+
+<u> Register Create </u>
+
+> 'POST /api/v0/register'
+
+Client needs to supply the following attributes:
+
+      {
+        "user_name": "turing_test"
+        "email": "turing_test@turing.edu"
+        "password_digest": "password"
+      }
+
+<u> Login New </u>
+
+> 'GET /api/v0/login'
+
+Client will see a form with the following attributes:
+
+      {
+        "user_name": "turing_test"
+        "password_digest": "password"
+      }
+
+<u> Login Create </u>
+
+> 'POST /api/v0/login'
+
+Client needs to supply the following attributes:
+
+      {
+        "user_name": "turing_test"
+        "password_digest": "password"
+      }
+
+<u> Logout Delete </u>
+
+> 'DELETE api/v0/logout'
+
+      {
+        "message": "You are successfully logged out."
+      }
+
+<u> Search Get </u>
+
+> 'GET api/v0/search'
+
+{
+    "data": 
+      [{
+        "id": "1",
+        "type": "card",
+        "attributes": {
+            "id": 1,
+            "multiverseid": "600",
+            "name": "Black Lotus",
+            "mana_cost": "{0}",
+            "converted_mana_cost": 0.0,
+            "colors": null,
+            "color_identity": null,
+            "type": "Artifact",
+            "types": [
+                "Artifact"
+            ],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+      },
+      {
+        "id": "2",
+        "type": "card",
+        "attributes": {
+            "id": 2,
+            "multiverseid": "700",
+            "name": "Whale",
+            "mana_cost": "{R}",
+            "converted_mana_cost": 10.0,
+            "colors": [Red],
+            "color_identity": [Red, Green],
+            "type": "Artifact",
+            "types": ["Artifact"],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+      }]
+}
+
+<u> Decks Index  </u>
+
+> 'GET api/v0/decks'
+
+Deck has a many-to-many relationship with Card and Deck_card is the join table.
+
+{
+    "data": 
+      [{
+        "id": "1",
+        "type": "deck",
+        "attributes": {
+            "name": "Deck #1",
+            "user_id": 1
+        }
+      },
+      {
+        "id": "2",
+        "type": "deck",
+        "attributes": {
+            "name": "Deck #2",
+            "user_id": 1
+        }
+      }]
+}
+
+{
+    "data": 
+      [{
+        "id": "1",
+        "type": "deck_card",
+        "attributes": {
+            "deck_id": 1,
+            "card_id": 1,
+            "created_at": "09-01-2023"
+        }
+      },
+      {
+        "id": "2",
+        "type": "deck_card",
+        "attributes": {
+            "deck_id": 2,
+            "card_id": 2,
+            "created_at": "09-05-2023"
+        }
+      }]
+}
+
+{
+    "data": 
+      [{
+        "id": "1",
+        "type": "card",
+        "attributes": {
+            "id": 1,
+            "multiverseid": "600",
+            "name": "Black Lotus",
+            "mana_cost": "{0}",
+            "converted_mana_cost": 0.0,
+            "colors": null,
+            "color_identity": null,
+            "type": "Artifact",
+            "types": [
+                "Artifact"
+            ],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+      },
+      {
+        "id": "2",
+        "type": "card",
+        "attributes": {
+            "id": 2,
+            "multiverseid": "700",
+            "name": "Whale",
+            "mana_cost": "{R}",
+            "converted_mana_cost": 10.0,
+            "colors": [Red],
+            "color_identity": [Red, Green],
+            "type": "Artifact",
+            "types": ["Artifact"],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+      }]
+}
+
+<u> Decks Show, Create, Update, and Delete </u>
+
+> 'GET api/v0/decks/:id'
+> 'POST api/v0/decks/:id'
+> 'PATCH api/v0/decks/:id'
+> 'DELETE api/v0/decks/:id'
+
+Deck has a many-to-many relationship with Card and Deck_card is the join table.
+
+{
+    "data": 
+      {
+        "id": "1",
+        "type": "deck",
+        "attributes": {
+            "name": "Deck #1",
+            "user_id": 1
+        }
+      }
+}
+
+{
+    "data": 
+      {
+        "id": "1",
+        "type": "deck_card",
+        "attributes": {
+            "deck_id": 1,
+            "card_id": 1,
+            "created_at": "09-01-2023"
+        }
+      }
+}
+
+{
+    "data": 
+      {
+        "id": "1",
+        "type": "card",
+        "attributes": {
+            "id": 1,
+            "multiverseid": "600",
+            "name": "Black Lotus",
+            "mana_cost": "{0}",
+            "converted_mana_cost": 0.0,
+            "colors": null,
+            "color_identity": null,
+            "type": "Artifact",
+            "types": [
+                "Artifact"
+            ],
+            "subtypes": null,
+            "rarity": "Rare",
+            "set": "2ED",
+            "text": "{T}, Sacrifice Black Lotus: Add three mana of any one color.",
+            "artist": "Christopher Rush",
+            "number": "233",
+            "power": null,
+            "toughness": null,
+            "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card",
+            "rulings": null
+        }
+      }
+}
+
+> '
 
 # Routes
 | Action | Route |
 | ----------- | ----------- |
+
 | get | '/api/v0/collections' |
 | get | '/api/v0/collections/:id' |
 | get | '/api/v0/cards/random' |
 | get | '/api/v0/cards/:id' |
+| get | '/api/v0/register' |
+| post | '/api/v0/register |
+| get | '/api/v0/login' |
+| post | '/api/v0/login' |
+| delete | '/api/v0/logout' |
+| get | 'api/v0/search' |
+| get | '/api/v0/decks' |
+| get | '/api/v0/decks/:id |
+| post | '/api/v0/decks/:id' |
+| patch | '/api/v0/decks/:id' |
+| delete | '/api/v0/decks/:id' |
+
 
 
 # Test Suite
