@@ -4,14 +4,11 @@ class Api::V0::UsersController < ApplicationController
   end
 
     def create
-      require 'pry'; binding.pry
-    # ?  user = user_params
-    #  ? user[:username] = user[:username].downcase
-    #  ? new_user = User.create(user)
-      # new_user = User.create!(user_params)
-      user = User.create!(user_params)
-
-  #   # TODO possible render json success message?
+      user = user_params
+      facade = UserFacade.new
+      new_user = facade.recieve_user_data(user)
+      render json: UserSerializer.new(new_user), status: :created
+      User.create!(user_params)
     end
 
   #  ? def login_form
@@ -29,6 +26,6 @@ class Api::V0::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email)
+    params.require(:user).permit(:username, :password_digest, :email, :id)
   end
 end
