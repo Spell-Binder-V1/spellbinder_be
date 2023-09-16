@@ -16,7 +16,7 @@ RSpec.describe 'Users', type: :request do
 
       expect(response).to have_http_status(:created)
       expect(response).to be_successful
-      # expect(response.body).to eq(UserSerializer.new(User.last))
+      expect(response.body).to eq(UserSerializer.new(User.last).to_json)
     end
   end
 end
