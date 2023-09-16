@@ -20,13 +20,13 @@ RSpec.describe "Collections Facade" do
     it "receives a specific collection's cards" do
       collection_id = "arn"
       collection_facade = CollectionFacade.new
-      collection_cards = collection_facade.receive_collection_cards(collection_id)
+      collection = collection_facade.receive_collection_details(collection_id)
 
-      collection_cards.each do |card|
+      collection.cards.each do |card|
         expect(card).to be_a(CardPoro)
       end
 
-      test_card = collection_cards.first
+      test_card = collection.cards.first
       expect(test_card.artist).to eq("Ken Meyer, Jr.")
       expect(test_card.color_identity).to eq(["W"])
       expect(test_card.colors).to eq(["W"])

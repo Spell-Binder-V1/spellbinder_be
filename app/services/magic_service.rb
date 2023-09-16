@@ -8,9 +8,9 @@ class MagicService
     get_url("/v1/sets/#{collection_id}")
   end
 
-  # def self.get_collection_cards(collection_code)
-  #   get_url("/v1/cards?set=#{collection_code}")
-  # end
+  def self.get_collection_cards(collection_code)
+    get_url("/v1/cards?set=#{collection_code}")
+  end
 
   def self.get_card_show(card_id)
     get_url("/v1/cards/#{card_id}")
