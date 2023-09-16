@@ -1,4 +1,4 @@
-class Card
+class CardPoro
   attr_reader :id,
               :multiverseid,
               :name,
