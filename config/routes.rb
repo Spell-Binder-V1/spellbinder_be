@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
       resources :users, only: [:create], path: 'register'
+      resources :decks, only: [:create, :index, :show, :update, :destroy], path: 'decks'
       resources :collections, only: [:index, :show]
       resources :cards, only: [:show] do
         collection do
