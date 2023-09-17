@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
-      resources :users, only: [:new, :create]
+      resources :users, only: [:create]
       resources :collections, only: [:index, :show]
       resources :cards, only: [:show] do
         collection do
@@ -12,3 +12,10 @@ Rails.application.routes.draw do
     end
   end
 end
+
+
+# | get | '/api/v0/register' |
+# | post | '/api/v0/register |
+# | get | '/api/v0/login' |
+# | post | '/api/v0/login' |
+# | delete | '/api/v0/logout' |
