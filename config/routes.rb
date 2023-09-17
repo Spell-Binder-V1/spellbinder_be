@@ -3,12 +3,11 @@ Rails.application.routes.draw do
     namespace :v0 do
       resources :users, only: [:create], path: 'register'
       resources :collections, only: [:index, :show]
-      resources :cards, only: [:show] do
-        collection do
-          get "random"
-        end
-      end
-      get 'search', to: 'search#search'
+      resources :cards, only: [:show]
+      get '/cards/random', to: 'cards#random'
+
+      post '/login', to: 'users#create'
+      get '/search', to: 'search#search'
     end
   end
 end
