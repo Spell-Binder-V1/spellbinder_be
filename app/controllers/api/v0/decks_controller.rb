@@ -12,6 +12,13 @@ class Api::V0::DecksController < ApplicationController
     end
   end
 
+  def destroy
+    deck = Deck.find(params[:id])
+    deck.destroy
+
+    head :no_content
+  end
+
   def index
     user = User.find_by(id: session[:user_id])
     decks = user.decks.all
@@ -57,8 +64,3 @@ class Api::V0::DecksController < ApplicationController
     params.require(:deck).permit(:name)
   end
 end
-# def index
-#   facade = DeckFacade.new
-#   decks = facade.receive_decks
-#   render json: DeckSerializer.new(decks)
-# end
