@@ -1,6 +1,6 @@
 class Api::V0::DecksController < ApplicationController
   before_action :logged_in?
-  before_action :set_deck, only: [:show, :update, :destroy]
+    before_action :set_deck, only: [:show, :update, :destroy]
 
   def create
     user = User.find_by(id: session[:user_id])
@@ -109,4 +109,9 @@ class Api::V0::DecksController < ApplicationController
   def deck_params
     params.require(:deck).permit(:name)
   end
+  # def index
+  #   facade = DeckFacade.new
+  #   decks = facade.receive_decks
+  #   render json: DeckSerializer.new(decks)
+  # end
 end
