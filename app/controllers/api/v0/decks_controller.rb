@@ -12,6 +12,15 @@ class Api::V0::DecksController < ApplicationController
     end
   end
 
+  def show
+    begin 
+      deck = Deck.find(params[:id])
+      render json: deck, status: :ok, content_type: 'application/json'
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: "Deck not found" }, status: :not_found, content_type: 'application/json'
+    end
+  end
+
   def add_card
     begin
       deck = Deck.find(params[:deck_id])
@@ -40,9 +49,9 @@ class Api::V0::DecksController < ApplicationController
   def deck_params
     params.require(:deck).permit(:name)
   end
-  # def index
-  #   facade = DeckFacade.new
-  #   decks = facade.receive_decks
-  #   render json: DeckSerializer.new(decks)
-  # end
 end
+# def index
+#   facade = DeckFacade.new
+#   decks = facade.receive_decks
+#   render json: DeckSerializer.new(decks)
+# end
