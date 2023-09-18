@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v0 do
       resources :users, only: [:create], path: 'register'
+      resources :decks, only: [:create, :index, :show, :update, :destroy], path: 'decks' do 
+      post 'add_card', to: 'decks#add_card'
+      post 'remove_card', to: 'decks#remove_card'
+      end
       resources :collections, only: [:index, :show]
       resources :cards, only: [:show] do
         collection do
