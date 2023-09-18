@@ -55,14 +55,44 @@ class Api::V0::DecksController < ApplicationController
     end
   end
 
+  # def remove_card
+  #   begin
+  #     deck = Deck.find(params[:deck_id])
+  #     deck.remove_card(params[:list], params[:card])
+  #     deck.save
+  #     render json: deck, status: :ok
+  #   rescue ActiveRecord::RecordNotFound
+  #     render json: { error: "Deck not found" }, status: :not_found
+  #   end
+  # end
+
+  # def remove_card
+  #   deck = Deck.find_by(id: params[:deck_id])
+  #   if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] } 
+  #     deck.remove_card(params[:list], params[:card])
+  #     deck.save
+  #     render json: deck, status: :ok
+  #   else
+  #     render json: { error: "Deck/card not found" }, status: :not_found
+  #   end
+  # end
+
   def remove_card
-    begin
-      deck = Deck.find(params[:deck_id])
-      deck.remove_card(params[:list], params[:card])
-      deck.save
-      render json: deck, status: :ok
-    rescue ActiveRecord::RecordNotFound
-      render json: { error: "Deck not found" }, status: :not_found
+    deck = Deck.find_by(id: params[:deck_id])
+    if deck 
+      if deck. cards && deck.cards[params[:list]]
+        if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] } 
+          deck.remove_card(params[:list], params[:card])
+          deck.save
+          render json: deck, status: :ok
+        else
+          render json: { error: "Deck/card/list not found" }, status: :not_found
+        end
+      else
+        render json: { error: "Deck/card/list not found" }, status: :not_found
+      end
+    else
+      render json: { error: "Deck/card/list not found" }, status: :not_found
     end
   end
 
