@@ -12,14 +12,7 @@ Rails.application.routes.draw do
       get 'search', to: 'search#search'
 
       post 'login', to: 'users#login'
-
+      delete 'logout', to: 'users#logout'
     end
   end
 end
-
-
-# | get | '/api/v0/register' |
-# | post | '/api/v0/register |
-# | get | '/api/v0/login' |
-# | post | '/api/v0/login' |
-# | delete | '/api/v0/logout' |

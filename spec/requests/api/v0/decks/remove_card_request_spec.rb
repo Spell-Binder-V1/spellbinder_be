@@ -37,6 +37,14 @@ RSpec.describe "remove card from deck" do
 
       expect(response.status).to eq(404)
       expect(JSON.parse(response.body)).to eq({ "error" => "Deck/card/list not found" })
+      
+      post api_v0_deck_remove_card_path(@deck.id), params: { list: 'side_board', card: @card3 }
+      expect(response.status).to eq(200)
+      expect(JSON.parse(response.body, symbolize_names: true)[:cards][:side_board].count).to eq(0)
+
+      post api_v0_deck_remove_card_path(@deck.id), params: { list: 'maybe_board', card: @card4 }
+      expect(response.status).to eq(200)
+      expect(JSON.parse(response.body, symbolize_names: true)[:cards][:maybe_board].count).to eq(0)
     end
   end
 end
