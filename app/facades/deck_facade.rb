@@ -1,12 +1,23 @@
 class DeckFacade
+  attr_reader :deck
 
-  def receive_decks
-    decks = Deck.all
-  #   deck_cards = decks.map do |deck|
-  #     Deck.new(deck)
-  #   end
-
-  #   deck_cards.each do |deck|
-  #   end
+  def initialize(deck)
+    @deck = deck
   end
+
+  def add_card(list, card)
+    card_facade = CardFacade.new
+    card = card_facade.receive_card_search(card).take(1)
+    deck.cards[list] << card
+    deck.save
+  end
+
+  # def remove_card(list, card)
+  #   deck.cards[list].delete(card)
+  #   deck.save
+  # end
+
+  # def count_cards(list)
+  #   deck.cards[list].count
+  # end
 end
