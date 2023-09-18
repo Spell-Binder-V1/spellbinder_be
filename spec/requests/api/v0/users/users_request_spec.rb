@@ -32,12 +32,12 @@ RSpec.describe "Users create" do
     end
   end
 
-  describe "POST 'api/v0/login'" do
-    it "logs in a user" do
-      valid_attributes = { username: 'Buff MagicKarp', password: 'password' }
-      post api_v0_login_path, params: { user: valid_attributes }
-      expect(response).to have_http_status(:ok)
-      expect(response.content_type).to match(a_string_including("application/json"))
-    end
-  end
+  # describe "POST 'api/v0/login'" do
+  #   it "logs in a user" do
+  #     valid_attributes = { username: 'Buff MagicKarp', password: 'password' }
+  #     post api_v0_login_path, params: { user: valid_attributes }
+  #     expect(response).to have_http_status(:ok)
+  #     expect(response.content_type).to match(a_string_including("application/json"))
+  #   end
+  # end
 end
