@@ -4,11 +4,9 @@ Rails.application.routes.draw do
       resources :users, only: [:create], path: 'register'
       resources :collections, only: [:index, :show]
       resources :cards, only: [:show] do
-        collection do
-          get "random"
-        end
-      end
-      get 'search', to: 'search#search'
+      get '/random', to: 'cards#random'
+      get '/search', to: 'search#search'
+      resources :decks
     end
   end
 end
