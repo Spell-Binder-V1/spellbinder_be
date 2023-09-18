@@ -8,12 +8,18 @@ class Api::V0::CollectionsController < ApplicationController
   def show
     collection_id = params[:id]
     facade = CollectionFacade.new
-    cards = facade.receive_collection_cards(collection_id)
+
+    collection_details = facade.receive_collection_details(collection_id)
+
     collection_codes = facade.filter_codes
+  
     if collection_codes.include?(params[:id])
-      render json: CardSerializer.new(cards)
+    render json: CollectionSerializer.new(collection_details)
     else
       render json: { error: "Collection not found" }, status: :not_found
     end
   end
 end
+  #   cards = facade.receive_collection_cards(collection_id)
+
+  # end

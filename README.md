@@ -593,6 +593,16 @@ Deck has a many-to-many relationship with Card and Deck_card is the join table.
       }
 }
 
+<u> Sad Path Error Handling </u>
+
+{
+  "errors": [
+    {
+      "detail": error
+    }
+  ]
+}
+
 > '
 
 # Routes
