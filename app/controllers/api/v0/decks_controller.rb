@@ -35,16 +35,16 @@ class Api::V0::DecksController < ApplicationController
   end
 
   def show
-    begin 
+    # begin 
       # deck = Deck.find(params[:id])
       render json: @deck, status: :ok, content_type: 'application/json'
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found, content_type: 'application/json'
-    end
+    # end
   end
 
   def add_card
-    begin
+    # begin
       deck = Deck.find(params[:deck_id])
       facade = DeckFacade.new(deck)
 
@@ -52,7 +52,7 @@ class Api::V0::DecksController < ApplicationController
       render json: deck, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found
-    end
+    # end
   end
 
   # def remove_card
@@ -99,11 +99,11 @@ class Api::V0::DecksController < ApplicationController
   private
 
   def set_deck
-    begin
+    # begin
     @deck = Deck.find(params[:id])
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found
-    end
+    # end
   end
 
   def deck_params
