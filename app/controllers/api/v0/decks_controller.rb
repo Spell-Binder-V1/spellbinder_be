@@ -7,7 +7,7 @@ class Api::V0::DecksController < ApplicationController
     deck = user.decks.build(deck_params)
     if deck.save
       render json: deck, status: :created
-    else 
+    else
       render json: deck.errors, status: :unprocessable_entity
     end
   end
@@ -16,34 +16,25 @@ class Api::V0::DecksController < ApplicationController
     begin
       deck = Deck.find(params[:deck_id])
       facade = DeckFacade.new(deck)
-      
+
       facade.add_card(params[:list], params[:card])
       render json: deck, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found
     end
-    # deck = Deck.find(params[:deck_id])
-    # facade = DeckFacade.new(deck)
-    # facade.add_card(params[:list], params[:card])
-    # if deck.save
-    #   render json: deck, status: :ok
-    # else 
-    #   render json: deck.errors, status: :not_found
-    # end
   end
 
   def remove_card
     begin
       deck = Deck.find(params[:deck_id])
-  
       deck.remove_card(params[:list], params[:card])
       deck.save
       render json: deck, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found
-    end 
-
+    end
   end
+
   private
 
   def deck_params

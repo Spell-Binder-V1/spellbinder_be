@@ -13,13 +13,6 @@ class DeckFacade
     deck.save
   end
 
-  # def remove_card(list, card)
-  #   binding.pry
-  #   card = deck.cards[list].find_by(name: card)
-  #   deck.cards[list].delete(card)
-  #   deck.save
-  # end
-
   # def count_cards(list)
   #   deck.cards[list].count
   # end

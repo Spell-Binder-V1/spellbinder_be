@@ -25,7 +25,7 @@ RSpec.describe "remove card from deck" do
 
       post api_v0_deck_remove_card_path(@deck.id), params: { list: 'main_board', card: @card}
       returned_card = JSON.parse(response.body, symbolize_names: true)
-# binding.pry
+  
       expect(returned_card[:cards][:main_board].count).to eq(1)
     end
   end
