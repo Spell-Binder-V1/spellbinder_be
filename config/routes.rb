@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'search', to: 'search#search'
 
       post 'login', to: 'users#login'
-
+      delete 'logout', to: 'users#logout'
     end
   end
 end
