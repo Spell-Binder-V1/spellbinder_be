@@ -16,10 +16,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
-
-# | get | '/api/v0/register' |
-# | post | '/api/v0/register |
-# | get | '/api/v0/login' |
-# | post | '/api/v0/login' |
-# | delete | '/api/v0/logout' |
