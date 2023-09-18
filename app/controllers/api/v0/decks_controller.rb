@@ -1,5 +1,5 @@
 class Api::V0::DecksController < ApplicationController
-  before_action :logged_in?, only: [:create, :add_card]
+  before_action :logged_in?
 
   def create
     user = User.find_by(id: session[:user_id])

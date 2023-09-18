@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       end
       resources :collections, only: [:index, :show]
       resources :cards, only: [:show] do
+        # /api/v0/cards/random
         collection do
           get "random"
         end

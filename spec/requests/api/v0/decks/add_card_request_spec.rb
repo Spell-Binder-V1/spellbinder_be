@@ -67,13 +67,12 @@ RSpec.describe "add card to deck" do
     context "when the deck does not exist" do
       it 'returns an error' do
         allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: @user.id })
-        # require 'pry'; binding.pry
+
         post api_v0_deck_add_card_path(-1), params: { list: 'main_board', card: @card}
-        
+
         expect(response).to have_http_status(:not_found)
         returned_response = JSON.parse(response.body, symbolize_names: true)
         expect(returned_response[:error]).to eq("Deck not found")
-        # expect(response.body).to include('Deck not found')
       end
     end
   end
