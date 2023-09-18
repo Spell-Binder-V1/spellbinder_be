@@ -35,10 +35,9 @@ class Api::V0::DecksController < ApplicationController
   def remove_card
     begin
       deck = Deck.find(params[:deck_id])
-      # facade = DeckFacade.new(deck)
-# require 'pry'; binding.pry
-      # facade.remove_card(params[:list], params[:card])
+  
       deck.remove_card(params[:list], params[:card])
+      deck.save
       render json: deck, status: :ok
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found
