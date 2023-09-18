@@ -14,6 +14,8 @@ class DeckFacade
   end
 
   # def remove_card(list, card)
+  #   binding.pry
+  #   card = deck.cards[list].find_by(name: card)
   #   deck.cards[list].delete(card)
   #   deck.save
   # end
