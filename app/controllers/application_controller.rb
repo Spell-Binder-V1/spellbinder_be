@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
   def logged_in?
     return if current_user
       redirect_back(fallback_location: api_v0_search_path)
-      flash[:error] = "You must be logged in or registered to create a deck."
-  end
+      # render json: { error: "You must be logged in to do that." }, status: :unauthorized
+    end
 
   def check_activity
     if current_user && session[:last_activity] && session[:last_activity] < 30.minutes.ago
       reset_session
-      flash[:notice] = "You have been logged out due to inactivity."
+      # render json: { notice: "You have been logged out due to inactivity." }, status: :ok
       redirect_to login_path
     else
       session[:last_activity] = Time.current
