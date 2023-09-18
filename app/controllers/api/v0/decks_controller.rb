@@ -12,6 +12,13 @@ class Api::V0::DecksController < ApplicationController
     end
   end
 
+  def index
+    user = User.find_by(id: session[:user_id])
+    decks = user.decks.all
+
+    render json: decks, status: :ok, content_type: 'application/json'
+  end
+
   def show
     begin 
       deck = Deck.find(params[:id])
