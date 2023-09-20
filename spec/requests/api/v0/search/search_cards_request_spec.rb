@@ -36,7 +36,7 @@ RSpec.describe "Cards Controller" do
       error = JSON.parse(response.body)
       expect(response).to have_http_status(:not_found)
       expect(response.status).to eq(404)
-      expect(error["error"]).to eq("No cards found").or be(nil)
+      expect(error["error"]).to eq("No cards found")
     end
   end
 end

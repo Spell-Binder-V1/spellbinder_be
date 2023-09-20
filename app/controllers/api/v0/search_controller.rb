@@ -5,8 +5,8 @@ class Api::V0::SearchController < ApplicationController
     card = facade.receive_card_search(card)
     if card.is_a?(Array) && !card.empty?
       render json: CardSerializer.new(card)
-    elsif card.present? ? card.is_a?(Error) : card.empty?
-      render json: ErrorSerializer.serialize(card), status: :not_found
+    elsif card.is_a?(Array) && card.empty?
+      render json: {error: "No cards found"}, status: :not_found
     end
   end
 end
