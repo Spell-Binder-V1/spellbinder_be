@@ -50,17 +50,18 @@ RSpec.describe "decks show" do
   describe "sad path" do
     it "returns empty if user has no decks" do
       user = User.create!(username: 'UniqueUsername', email: 'unique@example.com', password: 'password')
+      user.decks.create!(name: 'dreams')
 
       allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: user.id })
 
-    get api_v0_decks_path
+      get api_v0_decks_path
 
-    expect(response).to have_http_status(:ok)
-    expect(response.content_type).to include('application/json')
+      expect(response).to have_http_status(:ok)
+      expect(response.content_type).to include('application/json')
 
-    json = JSON.parse(response.body, symbolize_names: true)
+      json = JSON.parse(response.body, symbolize_names: true)
 
-    expect(json.count).to eq(0)
+      expect(json.count).to eq(0)
     end
 
     it "returns an error if user is not logged in" do

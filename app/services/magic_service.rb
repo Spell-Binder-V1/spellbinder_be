@@ -1,5 +1,4 @@
 class MagicService
-
   
   def self.get_collections
     get_url("/v1/sets")
