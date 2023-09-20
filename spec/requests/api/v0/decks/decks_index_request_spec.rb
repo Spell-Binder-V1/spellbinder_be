@@ -60,7 +60,7 @@ RSpec.describe "decks show" do
       expect(response.content_type).to include('application/json')
 
       json = JSON.parse(response.body, symbolize_names: true)
-require 'pry'; binding.pry
+
       expect(json.count).to eq(0)
     end
 
