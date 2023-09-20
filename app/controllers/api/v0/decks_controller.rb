@@ -29,15 +29,17 @@ class Api::V0::DecksController < ApplicationController
 
   def index
     user = User.find_by(id: session[:user_id])
-    decks = user.decks.all
-
+    decks = User.user_decks(user.id)
     render json: decks, status: :ok, content_type: 'application/json'
   end
 
   def show
     # begin 
       # deck = Deck.find(params[:id])
-      render json: @deck, status: :ok, content_type: 'application/json'
+      user = User.find_by(id: session[:user_id])
+      deck = Deck.find_by(id: params[:id])
+      show_deck = user.user_show_deck(user.id, deck.id)
+      render json: show_deck, status: :ok, content_type: 'application/json'
     rescue ActiveRecord::RecordNotFound
       render json: { error: "Deck not found" }, status: :not_found, content_type: 'application/json'
     # end

@@ -19,7 +19,7 @@ RSpec.describe 'decks show' do
     end
     it 'returns a deck as JSON' do
       get api_v0_deck_path(@deck.id)
-
+require 'pry'; binding.pry
       returned_response = JSON.parse(response.body, symbolize_names: true)
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to include('application/json')
