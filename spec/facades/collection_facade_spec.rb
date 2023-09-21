@@ -63,4 +63,13 @@ RSpec.describe "Collections Facade" do
       expect(collection_facade[0].id).to be_a(Integer)
     end
   end
+
+  describe "#filter_codes" do
+    it "filters collection codes" do
+      collection_facade = CollectionFacade.new.filter_codes
+
+      expect(collection_facade).to be_an(Array)
+      expect(collection_facade[0]).to be_a(String)
+    end
+  end
 end
