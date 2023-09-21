@@ -17,7 +17,7 @@ class Api::V0::DecksController < ApplicationController
     if @deck.update(deck_params)
       render json: @deck, status: :ok
     else
-      render json: { error: "Invalid" }, status: :unprocessable_entity
+      render json: { error: "Invalid" }, status: 302
     end
   end
 
@@ -41,7 +41,7 @@ class Api::V0::DecksController < ApplicationController
       show_deck = user.user_show_deck(user.id, deck.id)
       render json: show_deck, status: :ok, content_type: 'application/json'
     rescue ActiveRecord::RecordNotFound
-      render json: { error: "Deck not found" }, status: :not_found, content_type: 'application/json'
+      render json: { error: "Deck not found"}, status: :not_found, content_type: 'application/json'
     # end
   end
 

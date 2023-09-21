@@ -2,14 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "add card to deck" do 
   before :each do 
-    @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+    @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
     @deck = @user.decks.create!(name: 'Weak MagicKarp')
     @card = "Black Lotus"
-    # @encoded_card_name = URI.encode_www_form_component(@card_name)
   end
 
   describe "POST /api/v0/decks/:id/add_card" do
-    it '  adds a card to a deck' do
+    it '  adds a card to a deck', :vcr do
       allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: @user.id })
       post api_v0_deck_add_card_path(@deck.id), params: { list: 'main_board', card: @card}
       expect(response).to have_http_status(200)
@@ -55,23 +54,21 @@ RSpec.describe "add card to deck" do
   end
   describe "POST /api/v0/decks/:id/add_card" do
     context "when the user is not logged in" do
-      it 'returns an error' do
+      it 'returns an error', :vcr do
         post api_v0_deck_add_card_path(@deck.id), params: { list: 'main_board', card: @card}
-        
         expect(response).to have_http_status(302)
-        # expect(error_message[:error]).to eq("You must be logged in or registered to create a deck.")
-        # TODO revist this test
       end
     end
 
     context "when the deck does not exist" do
-      it 'returns an error' do
+      it 'returns an error', :vcr do
         allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: @user.id })
 
         post api_v0_deck_add_card_path(-1), params: { list: 'main_board', card: @card}
 
         expect(response).to have_http_status(:not_found)
         returned_response = JSON.parse(response.body, symbolize_names: true)
+        expect(returned_response).to have_key(:error)
         expect(returned_response[:error]).to eq("Deck not found")
       end
     end

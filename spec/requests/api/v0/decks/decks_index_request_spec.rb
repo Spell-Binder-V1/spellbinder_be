@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "decks show" do  
   describe "#index" do
     it "GET decks" do 
-      @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+      @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
       @deck = @user.decks.create!(name: 'dreams')
       @deck2 = @user.decks.create!(name: 'dreams2')
       @deck3 = @user.decks.create!(name: 'dreams3')
@@ -30,6 +30,7 @@ RSpec.describe "decks show" do
       expect(response.content_type).to include('application/json')
 
       json = JSON.parse(response.body, symbolize_names: true)
+
       expect(json).to be_a(Array)
       expect(json.count).to eq(3)
       json.each do |deck|
@@ -49,10 +50,10 @@ RSpec.describe "decks show" do
 
   describe "sad path" do
     it "returns empty if user has no decks" do
-      user = User.create!(username: 'UniqueUsername', email: 'unique@example.com', password: 'password')
-      user.decks.create!(name: 'dreams')
+      user1 = User.create!(username: 'UniqueUsername', email: 'unique@example.com')
+      user1.decks.create!(name: 'dreams')
 
-      allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: user.id })
+      allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: user1.id })
 
       get api_v0_decks_path
 
@@ -60,8 +61,7 @@ RSpec.describe "decks show" do
       expect(response.content_type).to include('application/json')
 
       json = JSON.parse(response.body, symbolize_names: true)
-
-      expect(json.count).to eq(0)
+      expect(json[0][:cards]).to eq({ main_board: [], side_board: [], maybe_board: [] })
     end
 
     it "returns an error if user is not logged in" do

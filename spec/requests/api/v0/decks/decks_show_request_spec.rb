@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'decks show' do
   describe '#show' do
     before :each do
-      @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+      @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
       @deck = @user.decks.create!(name: 'dreams')
       @card = "Black Lotus"
       @card2 = "The One Ring"
@@ -23,16 +23,18 @@ RSpec.describe 'decks show' do
       returned_response = JSON.parse(response.body, symbolize_names: true)
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to include('application/json')
-      expect(returned_response[:cards][:main_board].count).to eq(2)
-      expect(returned_response[:cards][:side_board].count).to eq(1)
-      expect(returned_response[:cards][:maybe_board].count).to eq(1)
-      expect(returned_response[:name]).to eq(@deck.name)
-      expect(returned_response[:cards][:main_board].first.first[:name]).to eq(@card)
-      expect(returned_response[:cards][:main_board].last.first[:name]).to eq(@card2)  
+
+      expect(returned_response[0][:cards][:main_board].count).to eq(2)
+      expect(returned_response[0][:cards][:side_board].count).to eq(1)
+      expect(returned_response[0][:cards][:maybe_board].count).to eq(1)
+      expect(returned_response[0][:name]).to eq(@deck.name)
+      expect(returned_response[0][:cards][:main_board].first.first[:name]).to eq(@card)
+      expect(returned_response[0][:cards][:main_board].last.first[:name]).to eq(@card2)  
     end
 
     it 'returns an error if deck is not found' do
       get api_v0_deck_path(123)
+      
       expect(response).to have_http_status(:not_found)
       expect(response.content_type).to include('application/json')
       expect(response.body).to eq({ error: 'Deck not found' }.to_json)

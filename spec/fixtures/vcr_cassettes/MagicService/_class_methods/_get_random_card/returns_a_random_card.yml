@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.magicthegathering.io/v1/cards?pageSize=1&random=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 22:29:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Link:
+      - <https://api.magicthegathering.io/v1/cards?page=81967&pageSize=1&random=true>;
+        rel="last", <https://api.magicthegathering.io/v1/cards?page=2&pageSize=1&random=true>;
+        rel="next"
+      Page-Size:
+      - '1'
+      Count:
+      - '1'
+      Total-Count:
+      - '81967'
+      Etag:
+      - W/"11f733c131c7c37b4f84e88d6b7ccc24"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 544c9958-a3d5-4261-9b18-8d8233894402
+      Ratelimit-Limit:
+      - '1000'
+      Ratelimit-Remaining:
+      - '999'
+      X-Runtime:
+      - '0.385994'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Mo%2B7A7kUFvyv6gxREVYYm6mF%2BmiHsssTL%2FRImCAIs5QfFrVhM3FkLDyB79C8HGsAf%2BRL7Al1kGBBJp7ou%2FaDcK%2F1Qiof3JwjlH9pzzkZJK9r2kzHRPV7jT3ul%2FGCxVwwqSfm01JsqfxMTxdAKobA1iKXJb5RsSQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80a5bf92ee7d86db-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cards":[{"name":"Imperial Seal","manaCost":"{B}","cmc":1.0,"colors":["B"],"colorIdentity":["B"],"type":"Sorcery","types":["Sorcery"],"rarity":"Rare","set":"ME2","setName":"Masters
+        Edition II","text":"Search your library for a card, then shuffle and put that
+        card on top. You lose 2 life.","flavor":"\"If Heaven has placed it in your
+        hands, it means that the throne is destined to be yours.\"","artist":"Li Tie","number":"96","layout":"normal","multiverseid":"184717","imageUrl":"http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=184717&type=card","printings":["2X2","J16","ME2","PRM","PTK"],"originalText":"Search
+        your library for a card, then shuffle your library and put that card on top
+        of it. You lose 2 life.","originalType":"Sorcery","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Legal"},{"format":"Predh","legality":"Legal"},{"format":"Vintage","legality":"Restricted"}],"id":"2594ab10-2977-5c08-92f0-d57d61a1d318"}]}'
+  recorded_at: Thu, 21 Sep 2023 22:29:41 GMT
+recorded_with: VCR 6.2.0

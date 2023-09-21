@@ -47,8 +47,8 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "faker"
   gem 'launchy'
-  # gem "vcr"
-  # gem "webmock"
+  gem "vcr"
+  gem "webmock"
   gem "simplecov"
 end
 
