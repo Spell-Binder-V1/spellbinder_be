@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'decks update' do
   describe '#update' do
     it "updates the name of a specified deck" do
-      user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+      user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
       deck = user.decks.create!(name: 'dreams')
 
       allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: user.id })
@@ -19,7 +19,7 @@ RSpec.describe 'decks update' do
 
   describe "sad path" do
     it 'returns an error if deck is not found' do
-      user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+      user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
       deck = user.decks.create!(name: 'dreams')
 
       put api_v0_deck_path(123), params: { deck: { name: "Punch Dreams" } }
