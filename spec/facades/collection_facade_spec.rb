@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Collections Facade" do
   describe "#receive_collections" do
-    it "receives collections" do
+    it "receives collections", :vcr do
       collection_facade = CollectionFacade.new
       collections = collection_facade.receive_collections
 
@@ -22,7 +22,7 @@ RSpec.describe "Collections Facade" do
   end
 
   describe "#receive_collection_cards" do
-    it "receives a specific collection's cards" do
+    it "receives a specific collection's cards", :vcr do
       collection_id = "arn"
       collection_facade = CollectionFacade.new
       collection = collection_facade.receive_collection_details(collection_id)
@@ -55,7 +55,7 @@ RSpec.describe "Collections Facade" do
   end
 
   describe "#receive_collection_codes" do
-    it "receives collection codes" do
+    it "receives collection codes", :vcr do
       collection_facade = CollectionFacade.new.receive_collection_codes
       
       expect(collection_facade).to be_an(Array)
@@ -65,7 +65,7 @@ RSpec.describe "Collections Facade" do
   end
 
   describe "#filter_codes" do
-    it "filters collection codes" do
+    it "filters collection codes", :vcr do
       collection_facade = CollectionFacade.new.filter_codes
 
       expect(collection_facade).to be_an(Array)
