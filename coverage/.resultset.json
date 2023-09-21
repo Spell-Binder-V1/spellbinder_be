@@ -232,32 +232,8 @@
           null,
           null
         ]
-      },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/facades/user_facade.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/user_poro.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1695317443
+    "timestamp": 1695317879
   }
 }
