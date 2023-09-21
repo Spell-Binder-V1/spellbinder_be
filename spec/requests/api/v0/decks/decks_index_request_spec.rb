@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "decks show" do  
+RSpec.describe "decks show" do
   describe "#index" do
-    it "GET decks" do 
+    it "GET decks" do
       @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
       @deck = @user.decks.create!(name: 'dreams')
       @deck2 = @user.decks.create!(name: 'dreams2')
@@ -25,11 +25,12 @@ RSpec.describe "decks show" do
       post api_v0_deck_add_card_path(@deck.id), params: { list: 'maybe_board', card: @card7 }
       post api_v0_deck_add_card_path(@deck2.id), params: { list: 'maybe_board', card: @card8 }
       get api_v0_decks_path
-      
+
       expect(response).to have_http_status(:ok)
       expect(response.content_type).to include('application/json')
 
       json = JSON.parse(response.body, symbolize_names: true)
+      require 'pry'; binding.pry
       expect(json).to be_a(Array)
       expect(json.count).to eq(3)
       json.each do |deck|

@@ -34,7 +34,7 @@ class Api::V0::DecksController < ApplicationController
   end
 
   def show
-    # begin 
+    # begin
       # deck = Deck.find(params[:id])
       user = User.find_by(id: session[:user_id])
       deck = Deck.find_by(id: params[:id])
@@ -70,7 +70,7 @@ class Api::V0::DecksController < ApplicationController
 
   # def remove_card
   #   deck = Deck.find_by(id: params[:deck_id])
-  #   if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] } 
+  #   if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] }
   #     deck.remove_card(params[:list], params[:card])
   #     deck.save
   #     render json: deck, status: :ok
@@ -81,9 +81,9 @@ class Api::V0::DecksController < ApplicationController
 
   def remove_card
     deck = Deck.find_by(id: params[:deck_id])
-    if deck 
+    if deck
       if deck. cards && deck.cards[params[:list]]
-        if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] } 
+        if deck.cards[params[:list]].first.flatten.any? { |hash| hash['name'] == params[:card] }
           deck.remove_card(params[:list], params[:card])
           deck.save
           render json: deck, status: :ok

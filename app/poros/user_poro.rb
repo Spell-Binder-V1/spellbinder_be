@@ -6,5 +6,6 @@ class UserPoro
     @username = user_params[:username]
     @email = user_params[:email]
     @password_digest = user_params[:password_digest]
+    @decks = []
   end
 end
