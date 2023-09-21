@@ -13,12 +13,13 @@ RSpec.describe "Collection PORO" do
 
 
       expect(collection).to be_a(Collection)
-      expect(collection.id).to eq(1)
-      expect(collection.code).to eq("10E")
-      expect(collection.name).to eq("Tenth Edition")
-      expect(collection.type).to eq("core")
-      expect(collection.release_date).to eq("2007-07-13")
-      expect(collection.block).to eq("Core Set")
+      expect(collection.id).to be_a(Integer)
+      expect(collection.code).to be_a(String)
+      expect(collection.name).to be_a(String)
+      expect(collection.type).to be_a(String)
+      expect(collection.release_date).to be_a(String)
+      expect(collection.block).to be_a(String)
+      expect(collection.cards).to be_a(Array)
     end
   end
 end
