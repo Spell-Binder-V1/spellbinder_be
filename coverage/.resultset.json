@@ -233,48 +233,11 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/card_poro.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/collection_code.rb": {
         "lines": [
           1,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           1,
@@ -283,6 +246,6 @@
         ]
       }
     },
-    "timestamp": 1695324141
+    "timestamp": 1695324491
   }
 }
