@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/environment.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/application.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/application.rb": {
         "lines": [
           1,
           null,
@@ -53,7 +53,7 @@
           null
         ]
       },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/boot.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -61,7 +61,7 @@
           1
         ]
       },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/environments/test.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -117,47 +117,18 @@
           null,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/initializers/cors.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           1,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/initializers/inflections.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/initializers/cors.rb": {
         "lines": [
           null,
           null,
@@ -177,18 +148,266 @@
           null
         ]
       },
-      "/Users/derekchavez/3mod/projects/spellbinder_be/config/routes.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/factories/deck_cards.rb": {
         "lines": [
           1,
           1,
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/factories/decks.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/factories/users.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/config/routes.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/facades/collection_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          500,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          92,
+          null,
+          null,
+          1,
+          92,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          500,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/services/magic_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/collection.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          501,
+          501,
+          501,
+          501,
+          501,
+          501,
+          501,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/card_poro.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          92,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/collection_code.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          500,
+          500,
           null,
           null
         ]
       }
     },
-    "timestamp": 1694620926
+    "timestamp": 1695313078
   }
 }

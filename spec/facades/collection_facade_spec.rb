@@ -7,7 +7,14 @@ RSpec.describe "Collections Facade" do
       collections = collection_facade.receive_collections
 
       collections.each do |collection|
+
         expect(collection).to be_a(Collection)
+        expect(collection.cards).to be_an(Array)
+        expect(collection.code).to be_a(String)
+        expect(collection.id).to be_a(Integer)
+        expect(collection.name).to be_a(String)
+        expect(collection.release_date).to be_a(String)
+        expect(collection.type).to be_a(String)
       end
 
       expect(collections).to be_an(Array)
@@ -46,6 +53,16 @@ RSpec.describe "Collections Facade" do
       expect(test_card.toughness).to eq("1")
       expect(test_card.type).to eq("Creature — Human")
       expect(test_card.types).to eq(["Creature"])
+    end
+  end
+
+  describe "#receive_collection_codes" do
+    it "receives collection codes" do
+      collection_facade = CollectionFacade.new.receive_collection_codes
+      
+      expect(collection_facade).to be_an(Array)
+      expect(collection_facade[0].code).to be_a(String)
+      expect(collection_facade[0].id).to be_a(Integer)
     end
   end
 end
