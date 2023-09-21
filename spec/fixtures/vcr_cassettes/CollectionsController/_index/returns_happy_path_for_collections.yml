@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.magicthegathering.io/v1/sets
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 502
+      message: Bad Gateway
+    headers:
+      Server:
+      - cloudflare
+      Date:
+      - Thu, 21 Sep 2023 21:29:19 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '155'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 80a5672b6cb22c60-ORD
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502
+        Bad Gateway</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Thu, 21 Sep 2023 21:29:19 GMT
+recorded_with: VCR 6.2.0

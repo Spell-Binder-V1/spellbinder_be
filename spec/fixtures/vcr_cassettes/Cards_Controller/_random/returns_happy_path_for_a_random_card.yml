@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.magicthegathering.io/v1/cards?pageSize=1&random=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 21:29:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Link:
+      - <https://api.magicthegathering.io/v1/cards?page=81967&pageSize=1&random=true>;
+        rel="last", <https://api.magicthegathering.io/v1/cards?page=2&pageSize=1&random=true>;
+        rel="next"
+      Page-Size:
+      - '1'
+      Count:
+      - '1'
+      Total-Count:
+      - '81967'
+      Etag:
+      - W/"44f0bf5d8bfec9ce6b5b76e0f65c3b78"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5ee4fb5d-4303-4141-89e1-96a64bdea50b
+      Ratelimit-Limit:
+      - '1000'
+      Ratelimit-Remaining:
+      - '999'
+      X-Runtime:
+      - '0.336455'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3cabEIsM9FsA85um8Z9IhTe1%2F1%2F3n47FkNNM%2B4ESCBOqjB7QdrhAsO43WlQvUhZNV1xmfQyzn%2BiVtMjX4J7HmfjCOKQyr3oboULkSMy8PcX2aYx%2FkncU55kzkkK9w48aoiv9aWMlb6zT03sqhrWnWJOTrwRZS8Y%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80a566eaab191419-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjYXJkcyI6W3sibmFtZSI6IkZvcmF0b2ciLCJtYW5hQ29zdCI6InsyfXtHfSIsImNtYyI6My4wLCJjb2xvcnMiOlsiRyJdLCJjb2xvcklkZW50aXR5IjpbIkciXSwidHlwZSI6IkNyZWF0dXJlIOKAlCBBdG9nIiwidHlwZXMiOlsiQ3JlYXR1cmUiXSwic3VidHlwZXMiOlsiQXRvZyJdLCJyYXJpdHkiOiJVbmNvbW1vbiIsInNldCI6IjhFRCIsInNldE5hbWUiOiJFaWdodGggRWRpdGlvbiIsInRleHQiOiJ7R30sIFNhY3JpZmljZSBhIEZvcmVzdDogRm9yYXRvZyBnZXRzICsyLysyIHVudGlsIGVuZCBvZiB0dXJuLiIsImZsYXZvciI6IkZpdmUgaHVuZHJlZCB5ZWFycyB0byBncm934oCUYmFyZWx5IGEgbWludXRlIHRvIGVhdC4iLCJhcnRpc3QiOiJNYXJrIFBvb2xlIiwibnVtYmVyIjoiMjQ54piFIiwicG93ZXIiOiIxIiwidG91Z2huZXNzIjoiMiIsImxheW91dCI6Im5vcm1hbCIsInZhcmlhdGlvbnMiOlsiYmVkMWNlYzQtODVjMC01MzFlLThjZmMtZTE3YzhiNDMzOTg1Il0sInByaW50aW5ncyI6WyI4RUQiLCJNSVIiXSwibGVnYWxpdGllcyI6W3siZm9ybWF0IjoiQ29tbWFuZGVyIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiRHVlbCIsImxlZ2FsaXR5IjoiTGVnYWwifSx7ImZvcm1hdCI6IkxlZ2FjeSIsImxlZ2FsaXR5IjoiTGVnYWwifSx7ImZvcm1hdCI6Ik1vZGVybiIsImxlZ2FsaXR5IjoiTGVnYWwifSx7ImZvcm1hdCI6Ik9hdGhicmVha2VyIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiUGF1cGVyY29tbWFuZGVyIiwibGVnYWxpdHkiOiJSZXN0cmljdGVkIn0seyJmb3JtYXQiOiJQZW5ueSIsImxlZ2FsaXR5IjoiTGVnYWwifSx7ImZvcm1hdCI6IlByZWRoIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiUHJlbW9kZXJuIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiVmludGFnZSIsImxlZ2FsaXR5IjoiTGVnYWwifV0sImlkIjoiN2YxYTZjZTQtNGMzNS01YzZlLTlhYWMtMzFjYzVjOTQ0M2VhIn1dfQ==
+  recorded_at: Thu, 21 Sep 2023 21:29:09 GMT
+recorded_with: VCR 6.2.0

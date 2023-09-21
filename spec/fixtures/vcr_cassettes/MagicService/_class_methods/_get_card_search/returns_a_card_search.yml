@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.magicthegathering.io/v1/cards?name=Black%20Lotus
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 21:29:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Link:
+      - ''
+      Page-Size:
+      - '100'
+      Count:
+      - '13'
+      Total-Count:
+      - '13'
+      Etag:
+      - W/"978e1b78d6ce0f824f8a9133211583fd"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e6795cc6-ba2c-4784-933c-bcb27a23f5f6
+      Ratelimit-Limit:
+      - '1000'
+      Ratelimit-Remaining:
+      - '999'
+      X-Runtime:
+      - '0.007932'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W7ac8I1urMI5buTwt04oYrAXYmZP4fs7p8%2Bripuegt7fZtV8feUslHjsq84gh7YJLSkqJ3udHu2bEchBMXOI0W2ZmMQRbRfh0NAMWKChRl4AeqQ8cSv3nNiAB4OmPVKBH1P1eaeOJ3uLug9HWcAIZhCBUP9SyS4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80a568157b4f22cd-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cards":[{"name":"Black Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"2ED","setName":"Unlimited
+        Edition","text":"{T}, Sacrifice Black Lotus: Add three mana of any one color.","artist":"Christopher
+        Rush","number":"233","layout":"normal","multiverseid":"600","imageUrl":"http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=600&type=card","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"originalText":"Adds
+        3 mana of any single color of your choice to your mana pool, then is discarded.
+        Tapping this artifact can be played as an interrupt.","originalType":"Mono
+        Artifact","legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Oldschool","legality":"Restricted"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"e6c9fe58-bc4f-529d-a387-77d61af87de4"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"30A","setName":"30th
+        Anniversary Edition","text":"{T}, Sacrifice Black Lotus: Add three mana of
+        any one color.","artist":"Christopher Rush","number":"228","layout":"normal","variations":["0e1cfa11-8ad4-5f3d-909f-232c390d8617"],"printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"d710e0f5-4d66-594e-9317-a61a1673262b"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"30A","setName":"30th
+        Anniversary Edition","text":"{T}, Sacrifice Black Lotus: Add three mana of
+        any one color.","artist":"Christopher Rush","number":"525","layout":"normal","variations":["d710e0f5-4d66-594e-9317-a61a1673262b"],"printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"0e1cfa11-8ad4-5f3d-909f-232c390d8617"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"CED","setName":"Collectors''
+        Edition","text":"{T}, Sacrifice Black Lotus: Add three mana of any one color.","artist":"Christopher
+        Rush","number":"233","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"ecfef046-ee24-54ca-9670-7fc2d09e09dc"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"CEI","setName":"Intl.
+        Collectors'' Edition","text":"{T}, Sacrifice Black Lotus: Add three mana of
+        any one color.","artist":"Christopher Rush","number":"233","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"27580ad8-a961-5c7e-9832-001faaa3455b"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"LEA","setName":"Limited
+        Edition Alpha","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","artist":"Christopher Rush","number":"232","layout":"normal","multiverseid":"3","imageUrl":"http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=3&type=card","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"originalText":"Adds
+        3 mana of any single color of your choice to your mana pool, then is discarded.
+        Tapping this artifact can be played as an interrupt.","originalType":"Mono
+        Artifact","legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Oldschool","legality":"Restricted"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"d4d8c9f9-31ed-53ed-ab67-eba86e2198fe"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"LEB","setName":"Limited
+        Edition Beta","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","artist":"Christopher Rush","number":"233","layout":"normal","multiverseid":"298","imageUrl":"http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=298&type=card","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"originalText":"Adds
+        3 mana of any single color of your choice to your mana pool, then is discarded.
+        Tapping this artifact can be played as an interrupt.","originalType":"Mono
+        Artifact","legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Oldschool","legality":"Restricted"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"7415e72a-f2f7-53e5-bcec-0a8c61ff3a15"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"O90P","setName":"Oversized
+        90''s Promos","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","artist":"Christopher Rush","number":"2","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"f6f2503b-5672-535b-b191-03917f3fd84f"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"OVNT","setName":"Vintage
+        Championship","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","flavor":"2003 Vintage Championship Winner","artist":"Christopher
+        Rush","number":"2003","layout":"normal","variations":["1b7fcac7-f912-5311-8b42-57927f4a00ea"],"printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"81111465-cc31-5936-899d-9bb26c481b12"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Special","set":"OVNT","setName":"Vintage
+        Championship","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","flavor":"2017 North American Vintage Champion","artist":"Steven Belledin","number":"2017NA","layout":"normal","variations":["81111465-cc31-5936-899d-9bb26c481b12"],"printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"id":"1b7fcac7-f912-5311-8b42-57927f4a00ea"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Rare","set":"PRM","setName":"Magic
+        Online Promos","text":"{T}, Sacrifice Black Lotus: Add three mana of any one
+        color.","artist":"Chris Rahn","number":"46932","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"551e4ae5-51ff-5ab6-a234-0fae3450339d"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Bonus","set":"VMA","setName":"Vintage
+        Masters","text":"{T}, Sacrifice Black Lotus: Add three mana of any one color.","artist":"Chris
+        Rahn","number":"4","layout":"normal","multiverseid":"382866","imageUrl":"http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=382866&type=card","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"originalText":"{T},
+        Sacrifice Black Lotus: Add three mana of any one color to your mana pool.","originalType":"Artifact","legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"96d9f512-3b9b-5dfa-bc86-cabc771e3e2a"},{"name":"Black
+        Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Mythic","set":"YDMU","setName":"Alchemy:
+        Dominaria","text":"{T}, Sacrifice Black Lotus: Add three mana of any one color.","artist":"Chris
+        Rahn","number":"35","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"36a958c6-3941-572b-8c19-f75b2b3e0cfd"}]}'
+  recorded_at: Thu, 21 Sep 2023 21:29:57 GMT
+recorded_with: VCR 6.2.0
