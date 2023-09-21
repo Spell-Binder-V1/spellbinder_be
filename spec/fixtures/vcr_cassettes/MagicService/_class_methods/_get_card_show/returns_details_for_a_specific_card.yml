@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.magicthegathering.io/v1/cards/3dd0bd56-5340-5542-8457-646b9acd58ff
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 21 Sep 2023 21:19:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"07a1030e2f1e83b9232b69e9b29a26ce"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8c5cd831-8f4b-4d56-8e61-7b2dc42b3b28
+      Ratelimit-Limit:
+      - '1000'
+      Ratelimit-Remaining:
+      - '999'
+      X-Runtime:
+      - '8.162654'
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NfJZfqNnPVzsfxDNOVRMWRHXr6RkTgWiJys%2Fo4nvxo7V5iIoRKqU%2FjSJW55RdCHTtpC9ItSbOS6DjFR3KEYoqZhar7Rnt%2BoaqH76pE%2FYC%2Bh4kcmvaGBGaD7Gh25YFKlPaOnw0iYBaly8VcV%2Bdmu23AikOrzzzVc%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80a55865ebda023b-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjYXJkIjp7Im5hbWUiOiJBYnUgSmEnZmFyIiwibWFuYUNvc3QiOiJ7V30iLCJjbWMiOjEuMCwiY29sb3JzIjpbIlciXSwiY29sb3JJZGVudGl0eSI6WyJXIl0sInR5cGUiOiJDcmVhdHVyZSDigJQgSHVtYW4iLCJ0eXBlcyI6WyJDcmVhdHVyZSJdLCJzdWJ0eXBlcyI6WyJIdW1hbiJdLCJyYXJpdHkiOiJVbmNvbW1vbiIsInNldCI6IkFSTiIsInNldE5hbWUiOiJBcmFiaWFuIE5pZ2h0cyIsInRleHQiOiJXaGVuIEFidSBKYSdmYXIgZGllcywgZGVzdHJveSBhbGwgY3JlYXR1cmVzIGJsb2NraW5nIG9yIGJsb2NrZWQgYnkgaXQuIFRoZXkgY2FuJ3QgYmUgcmVnZW5lcmF0ZWQuIiwiYXJ0aXN0IjoiS2VuIE1leWVyLCBKci4iLCJudW1iZXIiOiIxIiwicG93ZXIiOiIwIiwidG91Z2huZXNzIjoiMSIsImxheW91dCI6Im5vcm1hbCIsIm11bHRpdmVyc2VpZCI6Ijk2OCIsImltYWdlVXJsIjoiaHR0cDovL2dhdGhlcmVyLndpemFyZHMuY29tL0hhbmRsZXJzL0ltYWdlLmFzaHg/bXVsdGl2ZXJzZWlkPTk2OCZ0eXBlPWNhcmQiLCJwcmludGluZ3MiOlsiQVJOIiwiQkNIUiIsIkNIUiIsIlBSTSIsIlJJTiJdLCJvcmlnaW5hbFRleHQiOiJJZiBBYnUgZGllcyB3aXRob3V0IHJlZ2VuZXJhdGluZyB3aGlsZSBwYXJ0aWNpcGF0aW5nIGluIGFuIGF0dGFjayBvciBkZWZlbnNlLGFsbCBjcmVhdHVyZXMgQWJ1IGlzIGJsb2NraW5nIG9yIGJlaW5nIGJsb2NrZWQgYnkgYXJlIGFsc28ga2lsbGVkIGFuZCBtYXkgbm90IHJlZ2VuZXJhdGUuIiwib3JpZ2luYWxUeXBlIjoiU3VtbW9uIC0gTGVwZXIiLCJsZWdhbGl0aWVzIjpbeyJmb3JtYXQiOiJDb21tYW5kZXIiLCJsZWdhbGl0eSI6IkxlZ2FsIn0seyJmb3JtYXQiOiJEdWVsIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiTGVnYWN5IiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiT2F0aGJyZWFrZXIiLCJsZWdhbGl0eSI6IkxlZ2FsIn0seyJmb3JtYXQiOiJPbGRzY2hvb2wiLCJsZWdhbGl0eSI6IkxlZ2FsIn0seyJmb3JtYXQiOiJQYXVwZXJjb21tYW5kZXIiLCJsZWdhbGl0eSI6IlJlc3RyaWN0ZWQifSx7ImZvcm1hdCI6IlByZWRoIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiUHJlbW9kZXJuIiwibGVnYWxpdHkiOiJMZWdhbCJ9LHsiZm9ybWF0IjoiVmludGFnZSIsImxlZ2FsaXR5IjoiTGVnYWwifV0sImlkIjoiM2RkMGJkNTYtNTM0MC01NTQyLTg0NTctNjQ2YjlhY2Q1OGZmIn19
+  recorded_at: Thu, 21 Sep 2023 21:19:23 GMT
+recorded_with: VCR 6.2.0

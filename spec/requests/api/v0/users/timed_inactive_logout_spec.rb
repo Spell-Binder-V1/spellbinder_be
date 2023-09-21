@@ -2,10 +2,10 @@ require "rails_helper"
 
 RSpec.describe "timed inactive logout", type: :request do
   before :each do
-    valid_attributes = { username: 'Buff MagicKarp', email: 'level@gang', password: 'password' }
+    valid_attributes = { username: 'Buff MagicKarp', email: 'level@gang' }
     User.create(valid_attributes)
     @user = User.last
-    valid_data = { username: 'Buff MagicKarp', password: 'password' }
+    valid_data = { username: 'Buff MagicKarp' }
     allow_any_instance_of(ApplicationController).to receive(:session).and_return({ user_id: @user.id })
     post api_v0_login_path, params: valid_data
   end
