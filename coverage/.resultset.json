@@ -233,7 +233,7 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/collection_code.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/error.rb": {
         "lines": [
           1,
           1,
@@ -246,6 +246,6 @@
         ]
       }
     },
-    "timestamp": 1695324491
+    "timestamp": 1695324591
   }
 }

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-09-21T14:28:11-05:00">2023-09-21T14:28:11-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-09-21T14:29:51-05:00">2023-09-21T14:29:51-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -71,7 +71,7 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#f9e83f73976474a404ed55997cfbfae06d46f0a1" class="src_link" title="app/poros/collection_code.rb">app/poros/collection_code.rb</a></td>
+            <td class="strong t-file__name"><a href="#fba6d735a3c600cb3053ec5a467d0bffe07eed3d" class="src_link" title="app/poros/error.rb">app/poros/error.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">8</td>
             <td class="cell--number">5</td>
@@ -219,9 +219,9 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="f9e83f73976474a404ed55997cfbfae06d46f0a1">
+        <div class="source_table" id="fba6d735a3c600cb3053ec5a467d0bffe07eed3d">
   <div class="header">
-    <h3>app/poros/collection_code.rb</h3>
+    <h3>app/poros/error.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -252,7 +252,7 @@
 
             
 
-            <code class="ruby">class CollectionCode</code>
+            <code class="ruby">class Error</code>
           </li>
         </div>
       
@@ -263,7 +263,7 @@
 
             
 
-            <code class="ruby">  attr_reader :code, :id</code>
+            <code class="ruby">  attr_reader :status, :error</code>
           </li>
         </div>
       
@@ -285,7 +285,7 @@
 
             
 
-            <code class="ruby">  def initialize(attributes, id)</code>
+            <code class="ruby">  def initialize(attributes)</code>
           </li>
         </div>
       
@@ -296,7 +296,7 @@
 
             
 
-            <code class="ruby">    @id = id</code>
+            <code class="ruby">    @status = attributes[:status]</code>
           </li>
         </div>
       
@@ -307,7 +307,7 @@
 
             
 
-            <code class="ruby">    @code = attributes[:code]</code>
+            <code class="ruby">    @error = attributes[:error]</code>
           </li>
         </div>
       
