@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Cards Controller" do
   describe "#random" do
-    it "returns happy path for a random card" do
+    it "returns happy path for a random card", :vcr do
       get "/api/v0/cards/random"
       expect(response).to be_successful
       random_card_data = JSON.parse(response.body)
@@ -62,7 +62,7 @@ RSpec.describe "Cards Controller" do
   end
 
   describe "card show" do
-    it "returns happy path for a specific card" do
+    it "returns happy path for a specific card", :vcr do
       card_id = 600
       get "/api/v0/cards/#{card_id}"
 
@@ -123,7 +123,7 @@ RSpec.describe "Cards Controller" do
       expect(response.status).to eq(200)
     end
 
-    it "return sad path for a cards show" do
+    it "return sad path for a cards show", :vcr do
       card_invalid_id = "invalid_id"
       get "/api/v0/cards/#{card_invalid_id}"
 
@@ -131,6 +131,12 @@ RSpec.describe "Cards Controller" do
       expect(response.status).to eq(404)
       error_response = JSON.parse(response.body, symbolize_names: true)
       expect(error_response).to have_key(:errors)
+      expect(error_response[:errors]).to be_a(Array)
+      expect(error_response[:errors][0][:detail]).to be_a(Hash)
+      expect(error_response[:errors][0][:detail]).to have_key(:status)
+      expect(error_response[:errors][0][:detail][:status]).to be_a(Integer)
+      expect(error_response[:errors][0][:detail]).to have_key(:error)
+      expect(error_response[:errors][0][:detail][:error]).to be_a(String)
     end
   end
 end
