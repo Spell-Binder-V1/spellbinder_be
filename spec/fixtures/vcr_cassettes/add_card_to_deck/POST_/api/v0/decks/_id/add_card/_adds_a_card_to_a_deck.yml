@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Sep 2023 19:49:08 GMT
+      - Thu, 21 Sep 2023 22:29:17 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -51,13 +51,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f7698e5d-3c95-460b-9e09-3d62ceebae7e
+      - 121b6ebf-2928-42dd-add9-1734399b14a8
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
       - '999'
       X-Runtime:
-      - '0.010262'
+      - '0.009837'
       Vary:
       - Origin
       Via:
@@ -65,13 +65,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Qxgzn1QTt0x%2FMe8qeDHCuoFFbTbHSDJ9DGlHfiReNSWXShzDBj2gzRFZ8TAG%2BqiEpg7J0ZVE7oBd6YPehBuh3hZejghWTFiSp0l5lK0UuFWYoxya7dj0xpSWrr45bPgyJwIuNTOnxy%2FfLR4MuF6EZuJ2WREpjiU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=baGH7B3r6BgvlbA6FsIRcf1KfwlT%2BvaMuQK3kMpcr6aKlXIrzHbAkreHTAZtcV1ZZxLagQgZXbycJeXYcZvfOq4S494jnvkeUrM8SdfhKwCIy2C8y6T5Bw%2BfGyUeeO7lZk8y%2BJ6VslfDg0nM%2BI%2FqfFra4Qn0CT0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a4d4660f582bb7-ORD
+      - 80a5bf0009b2022c-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -126,5 +126,5 @@ http_interactions:
         Lotus","manaCost":"{0}","cmc":0.0,"type":"Artifact","types":["Artifact"],"rarity":"Mythic","set":"YDMU","setName":"Alchemy:
         Dominaria","text":"{T}, Sacrifice Black Lotus: Add three mana of any one color.","artist":"Chris
         Rahn","number":"35","layout":"normal","printings":["2ED","30A","CED","CEI","LEA","LEB","O90P","OVNT","PRM","VMA","YDMU"],"legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"36a958c6-3941-572b-8c19-f75b2b3e0cfd"}]}'
-  recorded_at: Thu, 21 Sep 2023 19:49:08 GMT
+  recorded_at: Thu, 21 Sep 2023 22:29:17 GMT
 recorded_with: VCR 6.2.0

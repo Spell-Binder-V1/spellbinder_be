@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Sep 2023 21:29:19 GMT
+      - Thu, 21 Sep 2023 22:29:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -43,13 +43,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa5d20a2-2e61-43bb-b0d3-0130813d6157
+      - 4aa0eb09-2342-46bb-8430-a4556c2751a0
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
       - '999'
       X-Runtime:
-      - '9.569606'
+      - '11.901224'
       Vary:
       - Origin
       Via:
@@ -57,13 +57,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K2lL2nR5EdKDTt%2BSEDdTRdVqFUTjLEZE76iNqe3%2F9wLchInHHzeU2knDO6bpbWzq230N3xyUc2tMHZ%2BsZ5RSa%2B1JW0NlUzBy%2Fq7YKcGq6K4A9TuwKtxj8mLOPzD8UG9A1MswU5Ac0Lqi95fyuLkG12SoK9DcWIk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kmnit%2B5s7xETdAGGHto0k7JG72aBL1TDVCrCdEDC3j0BT6yzfjGhyJ3vf4nILOjMpo511uKmjsHRUt5hCQdWEC%2B%2BoCUSOWA26j26kIuZMVLUd1BsGc0Lq7OyZDn7SVvlCOpfq9wQparAtetUKdRaTtT78X8LmFs%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a566ee08e52a5a-ORD
+      - 80a5be7d5a311b68-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -74,5 +74,5 @@ http_interactions:
         3 mana of any single color of your choice to your mana pool, then is discarded.
         Tapping this artifact can be played as an interrupt.","originalType":"Mono
         Artifact","legalities":[{"format":"Commander","legality":"Banned"},{"format":"Duel","legality":"Banned"},{"format":"Legacy","legality":"Banned"},{"format":"Oathbreaker","legality":"Banned"},{"format":"Oldschool","legality":"Restricted"},{"format":"Predh","legality":"Banned"},{"format":"Vintage","legality":"Restricted"}],"id":"e6c9fe58-bc4f-529d-a387-77d61af87de4"}}'
-  recorded_at: Thu, 21 Sep 2023 21:29:19 GMT
+  recorded_at: Thu, 21 Sep 2023 22:29:08 GMT
 recorded_with: VCR 6.2.0

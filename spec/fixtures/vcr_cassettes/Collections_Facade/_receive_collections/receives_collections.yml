@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Sep 2023 17:19:20 GMT
+      - Thu, 21 Sep 2023 22:28:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -52,13 +52,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cce604a0-abf8-4f2f-b1a7-7394bb5a23ad
+      - 25f1ce2f-a3a7-4148-85c4-80de7c7b219c
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
-      - '999'
+      - '998'
       X-Runtime:
-      - '0.082505'
+      - '3.863358'
       Vary:
       - Origin
       Via:
@@ -66,13 +66,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bSIEqRQsjz3omTusRhAZvLsTHmvmJKYOuqlJoc4r3by99nEdG7yj8mR%2BhpEYGo84jzBwyWkAzq6sdshu%2FS3KMCGIm5G5w0Ff6%2FA3ag%2BFIbSb%2FaN2TfFPIql%2FQJUy2yFYewO1uFOgfWFK30KrRAYJcEBq9Y%2BYOcQ%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vs%2FFQtp4kECaIZszOYJrIrM4DwEA8ygGoCyc1dh9qQiorO%2FiAa0gGsZFmUKo5vnijyweA%2ByEsqYMdrbsTqWQw4uBVRE%2B%2BiZFoC%2F9RWrc4jR9NYM3UGyytJCd6aga%2FnPpGeDuryiJB3sf%2BvrV9Dh7oTpQGUyV9Xg%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a3f8f5de0a2dba-ORD
+      - 80a5be5568b801ec-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -591,5 +591,5 @@ http_interactions:
         Premiere Shop 2007","type":"promo","releaseDate":"2007-01-01","onlineOnly":false},{"code":"PMPS08","name":"Magic
         Premiere Shop 2008","type":"promo","releaseDate":"2008-01-01","onlineOnly":false},{"code":"PMPS09","name":"Magic
         Premiere Shop 2009","type":"promo","releaseDate":"2009-01-01","onlineOnly":false}]}'
-  recorded_at: Thu, 21 Sep 2023 17:19:20 GMT
+  recorded_at: Thu, 21 Sep 2023 22:28:54 GMT
 recorded_with: VCR 6.2.0

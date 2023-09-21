@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Sep 2023 21:19:14 GMT
+      - Thu, 21 Sep 2023 22:29:26 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -52,13 +52,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7fab9324-ee87-46da-86b9-8c2c572b426e
+      - 6c24f493-99e3-437d-9f79-b1e321b0bc16
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
       - '999'
       X-Runtime:
-      - '0.031431'
+      - '0.037645'
       Vary:
       - Origin
       Via:
@@ -66,13 +66,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=N4BrFPtlngqBkpNPIi52HZp%2BOdT6NksBtZGJa3BzkqujSo4vuig6M9FJv973pKLUSoaW7YOn92D0IXnwbk%2B6%2FwR37JLLkIAV859cgBlZ55sX1zX1xboiXKORcSyVAXjjbaxtPEeegkwMwLZIk3SEyLNx8cbm%2Bsg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mQXvxOWVS%2BaxrG9nOU5FFBVK9W%2F9yxFPI3L%2BXy5JT8FEKg3V%2FL4rAYHkjkt2uyNstEM%2FfyeDha1PR4z%2BMKa4K8Dxswz1g%2FgLGLhqEz%2BuUzc8Li9nBbdRox7jIDdzzkvQd%2Bkwm%2B0UyATwHGpVzsx4yuqES6mhC7k%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a55860383ac520-ORD
+      - 80a5bf395c1f22e4-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -591,5 +591,5 @@ http_interactions:
         Premiere Shop 2007","type":"promo","releaseDate":"2007-01-01","onlineOnly":false},{"code":"PMPS08","name":"Magic
         Premiere Shop 2008","type":"promo","releaseDate":"2008-01-01","onlineOnly":false},{"code":"PMPS09","name":"Magic
         Premiere Shop 2009","type":"promo","releaseDate":"2009-01-01","onlineOnly":false}]}'
-  recorded_at: Thu, 21 Sep 2023 21:19:14 GMT
+  recorded_at: Thu, 21 Sep 2023 22:29:26 GMT
 recorded_with: VCR 6.2.0

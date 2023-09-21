@@ -19,7 +19,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Thu, 21 Sep 2023 21:29:24 GMT
+      - Thu, 21 Sep 2023 22:32:19 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
@@ -27,13 +27,13 @@ http_interactions:
       Connection:
       - keep-alive
       X-Request-Id:
-      - '097e9cdd-bd29-49e5-adf4-a98818704e9e'
+      - 864c3ae6-b9da-4d7d-824d-884c9e872e3f
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
-      - '999'
+      - '997'
       X-Runtime:
-      - '0.006469'
+      - '0.004461'
       Vary:
       - Origin
       Via:
@@ -41,19 +41,19 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EKFLPuKv2AV9L8OpRbFxG%2FwyO86lc0huTY%2B8vdwNnLBrYHl9pHEztwxjuzAlWUBkIFJdmd%2FBrrdVNkvnld6HRYxJ69g9qE%2FfZ5tG0ucXk7y4L0i4YhoagN9RiE8FfL9AX4n4U2qqbECv29udQpXl9SxjHw7xU7M%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7rpi1LbUdlmueVwOQ34%2BOmpYEoMlXQamga1xj0NnYq3te3aFm0ZB%2BWLNJ6yzBoAgtnayHvoeTwfk1FeQmI3f3P%2F%2BIhdJriga%2F5es8K8OiE5qWvjdWwi15olBAQroxW3XcFgmWtO%2FCaiQwygmvMSGv%2BXrF%2FcSEws%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a5673e8a271ce2-ORD
+      - 80a5c3725f5562ab-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"status":404,"error":"Not Found"}'
-  recorded_at: Thu, 21 Sep 2023 21:29:24 GMT
+  recorded_at: Thu, 21 Sep 2023 22:32:19 GMT
 - request:
     method: get
     uri: https://api.magicthegathering.io/v1/sets
@@ -73,7 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Sep 2023 21:29:27 GMT
+      - Thu, 21 Sep 2023 22:32:19 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -106,13 +106,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3798c392-ce86-4e6b-85c6-ed7dfbe8b117
+      - f171597e-d5a5-4f9d-b3d8-f79b133e8567
       Ratelimit-Limit:
       - '1000'
       Ratelimit-Remaining:
-      - '998'
+      - '999'
       X-Runtime:
-      - '0.034646'
+      - '0.033880'
       Vary:
       - Origin
       Via:
@@ -120,13 +120,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QE6FkJCgMy4RXoj%2FN6O0Q8FjpvNrzZ%2FxqtiVELr%2FKh2%2Fb%2BtgstHVwcbXg8bz58ZiHqGTxdaeMWavpQVXyLX0n6mQny7h6D7gH2Ms0hJk5ZyVJZ8YtVEZoPG1%2BIIeWcMfILnj1XpT2mpJkWBWCSd6xXpq8ptMnIs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=90bt%2BZtSoI0kiXPfHTRcbEuYjqs8Naqogs3eLQhQeb3x3VSMGOQJrilDFcrFqULYXsOe2M%2FoGv8IneipJIJk3IjtazXiVCzjYMlJl63TbM%2BEtHbZJ4FvQjhgYTsLccNdspV%2Fw3QgvcC3IAm71IT9zAHpEJ7A8OU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80a5674bafc01cf4-ORD
+      - 80a5c3739b5f8137-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -645,5 +645,5 @@ http_interactions:
         Premiere Shop 2007","type":"promo","releaseDate":"2007-01-01","onlineOnly":false},{"code":"PMPS08","name":"Magic
         Premiere Shop 2008","type":"promo","releaseDate":"2008-01-01","onlineOnly":false},{"code":"PMPS09","name":"Magic
         Premiere Shop 2009","type":"promo","releaseDate":"2009-01-01","onlineOnly":false}]}'
-  recorded_at: Thu, 21 Sep 2023 21:29:27 GMT
+  recorded_at: Thu, 21 Sep 2023 22:32:19 GMT
 recorded_with: VCR 6.2.0
