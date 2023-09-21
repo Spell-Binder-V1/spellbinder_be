@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "remove card from deck" do 
   before :each do 
-    @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang', password: 'password')
+    @user = User.create!(username: 'Buff MagicKarp', email: 'level@gang')
     @deck = @user.decks.create!(name: 'dreams')
     @card = "Black Lotus"
     @card2 = "The One Ring"
