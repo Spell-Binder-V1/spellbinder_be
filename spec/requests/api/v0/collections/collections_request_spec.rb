@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "CollectionsController" do
   describe "#index" do
-    it "returns happy path for collections" do
+    it "returns happy path for collections", :vcr do
       get "/api/v0/collections"
       expect(response).to be_successful
       collections_data = JSON.parse(response.body)
@@ -30,7 +30,7 @@ RSpec.describe "CollectionsController" do
   end
 
   describe "#show" do
-    it "return happy path for a collections cards" do
+    it "return happy path for a collections cards", :vcr do
       collection_id = "ARN"
       get "/api/v0/collections/#{collection_id}"
       expect(response).to be_successful
@@ -88,7 +88,7 @@ RSpec.describe "CollectionsController" do
       expect(response.status).to eq(200)
     end
 
-    it "return sad path for a collection of cards" do
+    it "return sad path for a collection of cards", :vcr do
       collection_invalid_id = "invalid_id"
       get "/api/v0/collections/#{collection_invalid_id}"
 
