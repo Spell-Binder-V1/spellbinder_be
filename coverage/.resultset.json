@@ -233,7 +233,7 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/success_serializer.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/error_serializer.rb": {
         "lines": [
           1,
           1,
@@ -249,6 +249,6 @@
         ]
       }
     },
-    "timestamp": 1695410898
+    "timestamp": 1695411079
   }
 }
