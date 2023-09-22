@@ -1372,6 +1372,251 @@
           null
         ]
       },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/serializers/card_serializer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/card_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/serializers/collection_serializer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/collection_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/serializers/error_serializer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/error_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/serializers/success_serializer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/success_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/serializers/user_serializer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/nellie/turing/mod3/projects/spellbinder_be/spec/services/magic_service_spec.rb": {
         "lines": [
           1,
@@ -1712,26 +1957,26 @@
           null,
           null,
           1,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
-          458,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
+          459,
           null,
           null
         ]
@@ -1799,13 +2044,13 @@
           1,
           null,
           1,
-          1003,
-          1003,
-          1003,
-          1003,
-          1003,
-          1003,
-          1003,
+          1004,
+          1004,
+          1004,
+          1004,
+          1004,
+          1004,
+          1004,
           null,
           null
         ]
@@ -1837,9 +2082,9 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -1906,29 +2151,6 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/card_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/error_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/nellie/turing/mod3/projects/spellbinder_be/app/controllers/api/v0/collections_controller.rb": {
         "lines": [
           1,
@@ -1955,14 +2177,6 @@
           null,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/collection_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null
         ]
       },
@@ -2129,6 +2343,6 @@
         ]
       }
     },
-    "timestamp": 1695336857
+    "timestamp": 1695411674
   }
 }
