@@ -233,64 +233,22 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/card_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/card_poro.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/success_serializer.rb": {
         "lines": [
           1,
           1,
           null,
+          1,
           null,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1695410650
+    "timestamp": 1695410898
   }
 }
