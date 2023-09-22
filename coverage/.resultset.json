@@ -233,22 +233,32 @@
           null
         ]
       },
-      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/error_serializer.rb": {
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/serializers/collection_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/nellie/turing/mod3/projects/spellbinder_be/app/poros/collection.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1695411079
+    "timestamp": 1695411299
   }
 }
