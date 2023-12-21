@@ -1,4 +1,4 @@
-# class Api::V0::UsersController < ApplicationController
+class Api::V0::UsersController < ApplicationController
 
 #   def create
 #     if User.exists?(user_params)
@@ -40,4 +40,4 @@
 #   def user_login_params
 #     params.require(:user).permit(:username, :password)
 #   end
-# end
+end
