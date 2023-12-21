@@ -1,4 +1,4 @@
-# class DeckFacade
+class DeckFacade
 #   attr_reader :deck
 
 #   def initialize(deck)
@@ -16,4 +16,4 @@
 #   # def count_cards(list)
 #   #   deck.cards[list].count
 #   # end
-# end
+end
