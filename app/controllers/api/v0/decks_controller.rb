@@ -1,4 +1,4 @@
-# class Api::V0::DecksController < ApplicationController
+class Api::V0::DecksController < ApplicationController
 #   before_action :logged_in?
 #     before_action :set_deck, only: [:show, :update, :destroy]
 
@@ -116,4 +116,4 @@
 #   #   decks = facade.receive_decks
 #   #   render json: DeckSerializer.new(decks)
 #   # end
-# end
+end
