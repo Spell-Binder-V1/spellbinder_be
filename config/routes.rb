@@ -5,11 +5,11 @@ Rails.application.routes.draw do
       # resources :decks, only: [:create, :index, :show, :update, :destroy], path: 'decks' do
       # post 'add_card', to: 'decks#add_card'
       # post 'remove_card', to: 'decks#remove_card'
-    end
       resources :collections, only: [:index, :show]
       get 'cards/random', to: 'cards#random'
       resources :cards, only: [:show]
       get 'search', to: 'search#search'
+    end
 
       # post 'login', to: 'users#login'
       # delete 'logout', to: 'users#logout'
