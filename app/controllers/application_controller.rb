@@ -1,4 +1,4 @@
-# class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base
 #   helper_method :current_user
 #   # before_action :check_activity, if: :current_user
 
@@ -21,4 +21,4 @@
 #   #     session[:last_activity] = Time.current
 #   #   end
 #   # end
-# end
+end
