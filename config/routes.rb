@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
       # post 'login', to: 'users#login'
       # delete 'logout', to: 'users#logout'
-    end
+    # end
   end
 end
